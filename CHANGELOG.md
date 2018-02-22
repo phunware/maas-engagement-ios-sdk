@@ -1,14 +1,11 @@
 Engagement iOS SDK - Change Logs
 ================================
-Version 3.3.0 *(02/22/2018)*
-----------------------------
-**Features**
+## 3.3.0 (Thursday, Feb 22nd, 2018)
+#### Features
+* Update to PWCore 3.3.x
 
-* Update podspec to PWCore 3.3.X.
-
-**Bug fixes/ Performance enhancements**
-
-* Fix crash with vBLE startup.
+#### Bug fixes / performance enhancements
+* Fixed crash when starting vBLE.
 
 
 Version 3.2.0 *(12/18/2017)*
