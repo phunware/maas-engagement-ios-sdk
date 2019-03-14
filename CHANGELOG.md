@@ -1,4 +1,8 @@
 # PWEngagement Changelog
+## 3.7.3 (Wednesday, March 13th, 2019)
+#### Bug fixes / performance enhancements
+* Improve consistency of beacon notifications received from killed app state
+
 ## 3.7.2 (Thursday, January 10th, 2019)
 #### Bug fixes / performance enhancements
 * Update to MistSDK 1.4.2
