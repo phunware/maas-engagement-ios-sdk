@@ -11,7 +11,7 @@ Requirements
 ------------
 
 - PWCore 3.8.x
-- iOS 10.0 or greater
+- iOS 11.0 or greater
 - Xcode 8 or greater
 
 Documentation
@@ -36,6 +36,8 @@ Framework documentation is included in the the repository's Documents folder in 
 
 Steps to run the sample app
 ------------
+* Instructions [here](https://github.com/phunware/maas-engagement-ios-sdk/tree/master/Samples)
+
 1. Create a new iOS Engagement application in MaaS portal.
 
 2. Go to the directory of sample app and do a `pod install`.
