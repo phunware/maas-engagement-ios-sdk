@@ -38,27 +38,6 @@ Steps to run the sample app
 ------------
 * Instructions [here](https://github.com/phunware/maas-engagement-ios-sdk/tree/master/Samples)
 
-1. Create a new iOS Engagement application in MaaS portal.
-
-2. Go to the directory of sample app and do a `pod install`.
-
-3. Add the following key/value pairs to `Info.plist`:
-
- * `MaaSAppId`: The application ID from MaaS Portal.
- * `MaaSAccessKey`: The access key from MaaS Portal.
- * `MaaSSignatureKey`: The signature key from MaaS Portal.
-
-4. Configure your app for push notifications.
-   * Go to [developer.apple.com](http://developer.apple.com) and create a push notification certificate ([tutorial link](https://www.raywenderlich.com/123862/push-notifications-tutorial)).
-
-   * Once it's created, download the push production certificate and add it to Keychain Access. Then, from Keychain Access, export both the certificate and key. (Right click to view the Export option) as a  .p12 and set a password.
-
-   * Now, log on to the [MaaS Portal](https://maas.phunware.com), navigate to the app created for your application and update the following.
-     * Certificate (.p12): Click the grey ellipses button to upload the Production Push Certificate you created on developer.apple.com.
-     * Password: The password you setup for the push certificate.
-     * Environment: Use Production environment for production apps.  
-
-
 Attribution
 ------------
 
