@@ -8,6 +8,21 @@ PWEngagement Samples for iOS
 - Display monitored geofences
 - Manage messages in message center
 
+#### Usage:
+1. Navigate to `EngagementSample` directory in Terminal, and execute `pod update` (Cocoapods installation required).
+
+2. Fill out `applicationId`, `accessKey`, and `signatureKey` in AppDelegate.swift.
+
+3. Configure your app for push notifications (if you want to test broadcast notifications).
+   * Go to [developer.apple.com](http://developer.apple.com) and create a push notification certificate ([tutorial link](https://www.raywenderlich.com/123862/push-notifications-tutorial)).
+
+   * Once it's created, download the push production certificate and add it to Keychain Access. Then, from Keychain Access, export both the certificate and key. (Right click to view the Export option) as a  .p12 and set a password.
+
+   * Now, log on to the [MaaS Portal](https://maas.phunware.com), navigate to the app created for your application and update the following.
+     * Certificate (.p12): Click the grey ellipses button to upload the Production Push Certificate you created on developer.apple.com.
+     * Password: The password you setup for the push certificate.
+     * Environment: Use Production environment for production apps.  
+
 ## EngagementScenarios
 
 ### Overview
@@ -17,7 +32,7 @@ PWEngagement Samples for iOS
 - Provides a local notification handler allowing app to intercept and choose to display a custom notification
 
 ##### Usage:
-- Fill out `applicationId`, `accessKey`, and `signatureKey` in app delegate
+- Fill out `applicationId`, `accessKey`, and `signatureKey` in AppDelegate.swift
 
 Privacy
 -----------
