@@ -1,4 +1,9 @@
 # PWEngagement Changelog
+## 3.7.4 (Tuesday, October 1st, 2019)
+#### Bug fixes / performance enhancements
+* Reformat device token string for iOS 13
+* Add CoreNoAds subspec
+
 ## 3.7.3 (Wednesday, March 13th, 2019)
 #### Bug fixes / performance enhancements
 * Improve consistency of beacon notifications received from killed app state
