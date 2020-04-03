@@ -1,4 +1,9 @@
 # PWEngagement Changelog
+## 3.7.5 (Thursday, April 2nd, 2020)
+#### Bug fixes / performance enhacements
+* Update Mist location provider to support iOS 13+
+* Fix an issue where a deadlock would occur when tracking analytics for a received push notification
+
 ## 3.7.4 (Tuesday, October 1st, 2019)
 #### Bug fixes / performance enhancements
 * Reformat device token string for iOS 13
@@ -35,6 +40,10 @@
 
 #### Bug fixes / performance enhancements
 * Capability to unset all profile attributes by passing a nil dictionary
+
+## 3.5.1 (Monday, Aug 27th, 2018)
+#### Bug fixes / performance enhancements
+* Fix crash on iOS 12
 
 ## 3.5.0 (Monday, Aug 13th, 2018)
 #### Bug fixes / performance enhancements
