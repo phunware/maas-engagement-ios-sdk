@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.ios.dependency 'FMDB'
   s.ios.dependency 'MistSDK', '1.5.58'
-      
+        
   s.default_subspec = 'all-frameworks'
 
   s.subspec 'all-frameworks' do |sub|
