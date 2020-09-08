@@ -1,18 +1,24 @@
-Engagement SDK for iOS
+PWEngagement SDK for iOS
 ==================
 
-Version 3.7.5
+>Version 3.8.0
 
-Overview
-------------
 This is Phunware's iOS SDK for Mobile Engagement, a location and notification-based system. Visit https://maas.phunware.com/ for more details and to sign up.
 
 Requirements
 ------------
 
-- PWCore 3.8.x
+- PWCore 3.9.x
 - iOS 10.0 or greater
-- Xcode 8 or greater
+- Xcode 11 or greater
+
+Installation
+------------
+Phunware recommends using [CocoaPods](http://www.cocoapods.org) 1.10 or greater to integrate the framework. Simply add
+
+`pod 'PWEngagement'`
+
+to your podfile, which would automatically resolve the required dependency and `PWCore`.
 
 Documentation
 ------------
@@ -59,7 +65,6 @@ Steps to run the sample app
 
 Attribution
 ------------
-
 PWEngagement uses the following third-party components.
 
 | Component | Description | License |

@@ -1,4 +1,8 @@
 # PWEngagement Changelog
+## 3.8.0 (Thursday, September 3rd, 2020)
+#### Features
+* Migrated to use XCFrameworks
+
 ## 3.7.5 (Thursday, April 2nd, 2020)
 #### Bug fixes / performance enhacements
 * Update Mist location provider to support iOS 13+

@@ -1,4 +1,14 @@
 # PWEngagement Migration Guide
+## Upgrade from 3.7.x to 3.8.x
+
+#### General
+
+This release updates the distribution packaging format to use the new XCFramework binary format.
+
+#### Upgrade Steps
+
+1. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.8.x'`, then run `pod update` in the Terminal to update the framework.
+
 ## Upgrade from 3.6.x to 3.7.x
 
 #### General
@@ -14,9 +24,11 @@ This release includes PWCore 3.8.x which contains new automatic screen view anal
 ## Upgrade from 3.5.x to 3.6.x
 
 #### General
+
 This release adds support for When-In-Use location permission.
 
 #### Upgrade Steps
+
 1. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.6.x'`, then run `pod update` in the Terminal to update the framework.
 
 ## Upgrade from 3.4.x to 3.5.x
@@ -34,9 +46,11 @@ The iOS deployment target of PWEngagement is now 10.0 instead of 9.0. To be comp
 ## Upgrade from 3.3.x to 3.4.x
 
 #### General
+
 This release adds support for new release of Core and removes location and push notification permission prompting
 
 #### Upgrade Steps
+
 1. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.4.x'`, then run `pod update` in the Terminal to update the framework. This will include the latest version of PWCore 3.6.x.
 
 2. To grant push notification permission we recommend following [Apple's best practices](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html). If permission is not granted the app will not receive push notifications.
@@ -46,7 +60,9 @@ This release adds support for new release of Core and removes location and push 
 ## Upgrade from 3.2.x to 3.3.x
 
 #### General
+
 This release adds support for new release of Core
 
 #### Upgrade Steps
+
 1. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.3.x'`, then run `pod update` in the Terminal to update the framework. This will include the latest version of PWCore 3.3.x.
