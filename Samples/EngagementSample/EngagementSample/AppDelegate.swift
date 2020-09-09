@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let accessKey = ""
     let signatureKey = ""
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         PWLogger.fileLoggingEnabled(true, forService: PWEngagement.serviceName())
         PWLogger.setLoggersLogLevel(.debug)

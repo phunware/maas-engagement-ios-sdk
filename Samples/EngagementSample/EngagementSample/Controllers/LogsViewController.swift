@@ -33,8 +33,8 @@ class LogsViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = image
         navigationController?.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         configureSearchBar()
     }
@@ -234,9 +234,9 @@ extension LogsViewController: UISearchBarDelegate {
 extension LogsViewController {
     
     @objc func keyboardDidShow(notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue, let tabBarController = tabBarController {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue, let tabBarController = tabBarController {
             let newHeight = keyboardSize.size.height - tabBarController.tabBar.frame.height
-            let insets = UIEdgeInsetsMake(0, 0, newHeight, 0)
+            let insets = UIEdgeInsets.init(top: 0, left: 0, bottom: newHeight, right: 0)
             tableView.contentInset = insets
             tableView.scrollIndicatorInsets = insets
             scrollButtonBottomConstraint.constant = newHeight + scrollButtonBottomDefault
@@ -244,7 +244,7 @@ extension LogsViewController {
     }
     
     @objc func keyboardWillHide() {
-        let insets = UIEdgeInsetsMake(0, 0, 0, 0)
+        let insets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
         scrollButtonBottomConstraint.constant = scrollButtonBottomDefault

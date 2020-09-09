@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let accessKey = ""
     let signatureKey = ""
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         PWEngagement.start(withMaasAppId: applicationId, accessKey: accessKey, signatureKey: signatureKey, completion: nil)
         PWEngagement.didFinishLaunching(options: launchOptions) { notification -> Bool in

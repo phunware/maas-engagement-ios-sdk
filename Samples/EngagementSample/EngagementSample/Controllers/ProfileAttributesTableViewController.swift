@@ -123,7 +123,7 @@ class ProfileAttributesTableViewController: UITableViewController {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.activityIndicatorViewStyle = .gray
+        loadingIndicator.style = .gray
         loadingIndicator.startAnimating()
         
         alertController.view.addSubview(loadingIndicator)

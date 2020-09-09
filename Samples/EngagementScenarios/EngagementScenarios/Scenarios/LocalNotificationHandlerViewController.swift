@@ -27,7 +27,7 @@ class LocalNotificationHandlerViewController: UIViewController {
             
             let notificationContent = UNMutableNotificationContent()
             notificationContent.body = "Welcome \(strongSelf.firstName)! You will be called for your appointment shortly."
-            notificationContent.sound = UNNotificationSound.default()
+            notificationContent.sound = UNNotificationSound.default
             
             let request = UNNotificationRequest(identifier: "notification", content: notificationContent, trigger: nil)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)

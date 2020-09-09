@@ -41,8 +41,8 @@ class MessageDetailViewController: UIViewController {
         if message.isRead == false {
             message.read()
         }
-        let titleAttributes = [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)]
-        let valueAttributes = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: UIFont.systemFontSize), NSAttributedStringKey.foregroundColor : UIColor.gray]
+        let titleAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)]
+        let valueAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: UIFont.systemFontSize), NSAttributedString.Key.foregroundColor : UIColor.gray]
         let text = NSMutableAttributedString(string: "", attributes: titleAttributes)
         
         if let messageId = message.identifier {
