@@ -1,4 +1,9 @@
 # PWEngagement Changelog
+## 3.8.1 (Thursday, November 5, 2020)
+#### Bug fixes / performance enhancements
+* Migrated Mist beacon provider into its own framework
+* Built and archived SDK with Xcode 12.
+
 ## 3.8.0 (Thursday, September 3rd, 2020)
 #### Features
 * Migrated to use XCFrameworks

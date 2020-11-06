@@ -1,7 +1,7 @@
 PWEngagement SDK for iOS
 ==================
 
->Version 3.8.0
+>Version 3.8.1
 
 This is Phunware's iOS SDK for Mobile Engagement, a location and notification-based system. Visit https://maas.phunware.com/ for more details and to sign up.
 
@@ -19,6 +19,12 @@ Phunware recommends using [CocoaPods](http://www.cocoapods.org) 1.10 or greater 
 `pod 'PWEngagement'`
 
 to your podfile, which would automatically resolve the required dependency and `PWCore`.
+
+## Beacon Provider Subspecs
+The below supported third party beacon providers are disabled by default. To enable them, add their respective subspec to your `Podfile`.
+
+### Mist
+`pod PWEngagement/MistBeaconProvider`
 
 Documentation
 ------------

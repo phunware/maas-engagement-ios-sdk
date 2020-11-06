@@ -9,6 +9,10 @@ This release updates the distribution packaging format to use the new XCFramewor
 
 1. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.8.x'`, then run `pod update` in the Terminal to update the framework.
 
+#### Using Subspecs
+
+1. Open the `Podfile` from your project and add a new pod dependency for each supported beacon provider subspec by using the following format:  `pod 'PWEngagement/<provider>', '3.8.x'`. Finally, run `pod install` in the Terminal to install the beacon provider subspec framework(s).
+
 ## Upgrade from 3.6.x to 3.7.x
 
 #### General

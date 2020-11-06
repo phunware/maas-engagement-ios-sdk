@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PWEngagement"
-  s.version      = "3.8.0"
+  s.version      = "3.8.1"
   s.summary      = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
   s.homepage     = "http://phunware.github.io/maas-engagement-ios-sdk/"
   s.author       = { 'Phunware, Inc.' => 'http://www.phunware.com' }
@@ -13,14 +13,26 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'Frameworks/PWEngagement.xcframework'
 
   s.ios.dependency 'FMDB'
-  s.ios.dependency 'MistSDK', '1.5.58'
         
   s.default_subspec = 'all-frameworks'
 
   s.subspec 'all-frameworks' do |sub|
-    sub.dependency 'PWCore', '~> 3.9.0'
+    sub.dependency 'PWCore', '~> 3.9.1'
+    sub.dependency 'PWCore/DeviceIdentity', '~> 3.9.1'
   end
-                                                
+  
+  s.subspec 'LimitedDeviceIdentity' do |sub|
+    sub.ios.vendored_frameworks = 'Frameworks/PWEngagement.xcframework'
+    sub.dependency 'PWCore', '~> 3.9.1'
+  end
+
+  s.subspec 'MistBeaconProvider' do |sub|
+    sub.ios.vendored_frameworks = 'Frameworks/MistBeaconProvider.xcframework'
+    sub.dependency 'MistSDKDR', '1.5.272'
+    sub.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+    sub.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+  end
+                
   s.library = 'sqlite3', 'z'
   s.ios.frameworks = 'CoreLocation'
   s.requires_arc  = true
