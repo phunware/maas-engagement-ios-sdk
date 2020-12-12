@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PWEngagement"
-  s.version      = "3.8.1"
+  s.version      = "3.9.0"
   s.summary      = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
   s.homepage     = "http://phunware.github.io/maas-engagement-ios-sdk/"
   s.author       = { 'Phunware, Inc.' => 'http://www.phunware.com' }
