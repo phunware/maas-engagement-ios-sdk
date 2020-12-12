@@ -89,7 +89,7 @@
 			<Abstract type="html">The zone message associated with the local notification.</Abstract>
 			<DeclaredIn>PWMELocalNotification.h</DeclaredIn>
 			
-			<Declaration>@property (readonly) PWMEZoneMessage *message</Declaration>
+			<Declaration>@property (readonly) Message *message</Declaration>
 			
 			<ReturnValue><Abstract type="html">The zone message associated with the local notification.</Abstract></ReturnValue>
 			<Anchor>//api/name/message</Anchor>
@@ -101,7 +101,7 @@
 			<Abstract type="html">The zone message associated with the local notification.</Abstract>
 			<DeclaredIn>PWMELocalNotification.h</DeclaredIn>
 			
-			<Declaration>@property (readonly) PWMEZoneMessage *message</Declaration>
+			<Declaration>@property (readonly) Message *message</Declaration>
 			
 			<ReturnValue><Abstract type="html">The zone message associated with the local notification.</Abstract></ReturnValue>
 			<Anchor>//api/name/message</Anchor>
@@ -113,7 +113,7 @@
 			<Abstract type="html">The zone message associated with the local notification.</Abstract>
 			<DeclaredIn>PWMELocalNotification.h</DeclaredIn>
 			
-			<Declaration>@property (readonly) PWMEZoneMessage *message</Declaration>
+			<Declaration>@property (readonly) Message *message</Declaration>
 			
 			<ReturnValue><Abstract type="html">The zone message associated with the local notification.</Abstract></ReturnValue>
 			<Anchor>//api/name/message</Anchor>

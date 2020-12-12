@@ -71,18 +71,6 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/PWEngagement/messages</TokenIdentifier>
-			<Abstract type="html">All the available PWMEZoneMessage list.</Abstract>
-			<DeclaredIn>PWEngagement.h</DeclaredIn>
-			
-			<Declaration>+ (NSArray&lt;PWMEZoneMessage*&gt; *)messages</Declaration>
-			
-			
-			<Anchor>//api/name/messages</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/PWEngagement/deviceId</TokenIdentifier>
 			<Abstract type="html">Return the device identifier which the mobile engagement service uses.</Abstract>
 			<DeclaredIn>PWEngagement.h</DeclaredIn>
@@ -287,7 +275,7 @@
 			<Abstract type="html">Lets the mobile engagement service know that the app receives a notification, so that it can process it internally, typically when you receive a notification in application:didReceiveRemoteNotification:fetchCompletionHandler:, userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler: and userNotificationCenter:willPresentNotification:withCompletionHandler:.</Abstract>
 			<DeclaredIn>PWEngagement.h</DeclaredIn>
 			
-			<Declaration>+ (void)didReceiveNotification:(NSDictionary *)userInfo withCompletion:(void ( ^ ) ( PWMEZoneMessage *message , NSError *error ))completion</Declaration>
+			<Declaration>+ (void)didReceiveNotification:(NSDictionary *)userInfo withCompletion:(void ( ^ ) ( Message *message , NSError *error ))completion</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>userInfo</Name>

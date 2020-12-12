@@ -75,13 +75,6 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
 @property (readonly, nullable) NSString *identifier;
 
 /**
- A Boolean value indicating whether or not the entry is read.
- @discussion A message is only considered read if it has been marked as such by the application. To mark this message as read, pass this message to the `PWMEZoneMessageManager` `readMessage:` method.
- @return A Boolean value indicating whether or not the message has been read.
- */
-@property (readonly) BOOL isRead;
-
-/**
  A string containing the campaign type of the message.
  @return A string containing the campaign type of the message.
  */
@@ -92,15 +85,5 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
  @return the timestamp identifying when the message is saved.
  */
 @property (readonly, nullable) NSDate *timestamp;
-
-/**
- Deletes this message.
- */
-- (void)remove;
-
-/**
- Marks this message as read.
- */
-- (void)read;
 
 @end

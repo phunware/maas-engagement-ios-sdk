@@ -229,42 +229,6 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PWMEZoneMessage/setIsRead:</TokenIdentifier>
-			<Abstract type="html">A Boolean value indicating whether or not the entry is read.</Abstract>
-			<DeclaredIn>PWMEZoneMessage.h</DeclaredIn>
-			
-			<Declaration>@property (readonly) BOOL isRead</Declaration>
-			
-			<ReturnValue><Abstract type="html">A Boolean value indicating whether or not the message has been read.</Abstract></ReturnValue>
-			<Anchor>//api/name/isRead</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PWMEZoneMessage/isRead</TokenIdentifier>
-			<Abstract type="html">A Boolean value indicating whether or not the entry is read.</Abstract>
-			<DeclaredIn>PWMEZoneMessage.h</DeclaredIn>
-			
-			<Declaration>@property (readonly) BOOL isRead</Declaration>
-			
-			<ReturnValue><Abstract type="html">A Boolean value indicating whether or not the message has been read.</Abstract></ReturnValue>
-			<Anchor>//api/name/isRead</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/PWMEZoneMessage/isRead</TokenIdentifier>
-			<Abstract type="html">A Boolean value indicating whether or not the entry is read.</Abstract>
-			<DeclaredIn>PWMEZoneMessage.h</DeclaredIn>
-			
-			<Declaration>@property (readonly) BOOL isRead</Declaration>
-			
-			<ReturnValue><Abstract type="html">A Boolean value indicating whether or not the message has been read.</Abstract></ReturnValue>
-			<Anchor>//api/name/isRead</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/PWMEZoneMessage/setCampaignType:</TokenIdentifier>
 			<Abstract type="html">A string containing the campaign type of the message.</Abstract>
 			<DeclaredIn>PWMEZoneMessage.h</DeclaredIn>
@@ -333,30 +297,6 @@
 			
 			<ReturnValue><Abstract type="html">the timestamp identifying when the message is saved.</Abstract></ReturnValue>
 			<Anchor>//api/name/timestamp</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PWMEZoneMessage/remove</TokenIdentifier>
-			<Abstract type="html">Deletes this message.</Abstract>
-			<DeclaredIn>PWMEZoneMessage.h</DeclaredIn>
-			
-			<Declaration>- (void)remove</Declaration>
-			
-			
-			<Anchor>//api/name/remove</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/PWMEZoneMessage/read</TokenIdentifier>
-			<Abstract type="html">Marks this message as read.</Abstract>
-			<DeclaredIn>PWMEZoneMessage.h</DeclaredIn>
-			
-			<Declaration>- (void)read</Declaration>
-			
-			
-			<Anchor>//api/name/read</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

@@ -17,32 +17,14 @@
 #import <PWEngagement/PWVBLEManager.h>
 #import <PWEngagement/PWBeaconManager.h>
 
-static NSString *const PWEngagementVersion = @"3.8.1";
+@class Message;
+
+static NSString *const PWEngagementVersion = @"3.9.0";
 
 /**
  The message identifier key which may be included in the notification's userInfo dictionary.
  */
 extern NSString *const PWMEMessageIdentifierKey;
-
-/**
- Post when there was new message arrived, and the identifer of the new message is included in the notification's userInfo dictionary. The message is included in the notification's userInfo dictionary with the `PWMEMessageIdentifierKey` key.
- */
-extern NSString *const PWMEReceiveMessageNotificationKey;
-
-/**
- Post when there was a message removed, and the identifer of the removed message is included in the notification's userInfo dictionary. The message is included in the notification's userInfo dictionary with the `PWMEMessageIdentifierKey` key.
- */
-extern NSString *const PWMEDeleteMessageNotificationKey;
-
-/**
- Post when there was a message modified, and the identifer of the modified message is included in the notification's userInfo dictionary. The message is included in the notification's userInfo dictionary with the `PWMEMessageIdentifierKey` key.
- */
-extern NSString *const PWMEModifyMessageNotificationKey;
-
-/**
- Post when there was a message read, and the identifer of the read message is included in the notification's userInfo dictionary. The message is included in the notification's userInfo dictionary with the `PWMEMessageIdentifierKey` key.
- */
-extern NSString *const PWMEReadMessageNotificationKey;
 
 /**
  The error key which may be included in the notification's userInfo dictionary.
@@ -141,11 +123,6 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
 + (NSArray<PWMEGeozone *> *)geozones;
 
 /**
- * All the available `PWMEZoneMessage` list.
- */
-+ (NSArray<PWMEZoneMessage *> *)messages;
-
-/**
  * Return the device identifier which the mobile engagement service uses.
  */
 + (NSString *)deviceId;
@@ -238,7 +215,7 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
  * @param completion A block that returns the notification with the received message or error.
  * @discussion The message deep linking could be fired from the `notificationHandler` block.
  */
-+ (void)didReceiveNotification:(NSDictionary *)userInfo withCompletion:(void(^)(PWMEZoneMessage *message, NSError *error))completion;
++ (void)didReceiveNotification:(NSDictionary *)userInfo withCompletion:(void(^)(Message *message, NSError *error))completion;
 
 /**
  * Set the static identifier to be registered with the current device.
