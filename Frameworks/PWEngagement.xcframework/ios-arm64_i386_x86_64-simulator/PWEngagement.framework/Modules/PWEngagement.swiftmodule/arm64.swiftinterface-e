@@ -6,24 +6,24 @@ import PWCore
 @_exported import PWEngagement
 import Swift
 extension PWEngagement {
-  public static func fetchMessages(startDate: Foundation.Date, endDate: Foundation.Date, completion: @escaping (MessageResult) -> Swift.Void)
-  public static func markMessageAsRead(messageIdentifier: Swift.String, completion: @escaping (MessageReadResult) -> Swift.Void)
-  public static func markMessageAsUnread(messageIdentifier: Swift.String, completion: @escaping (MessageReadResult) -> Swift.Void)
+  public static func fetchMessages(startDate: Foundation.Date, endDate: Foundation.Date, completion: @escaping (PWEngagement.MessageResult) -> Swift.Void)
+  public static func markMessageAsRead(messageIdentifier: Swift.String, completion: @escaping (PWEngagement.MessageReadResult) -> Swift.Void)
+  public static func markMessageAsUnread(messageIdentifier: Swift.String, completion: @escaping (PWEngagement.MessageReadResult) -> Swift.Void)
 }
 extension PWEngagement {
   @objc public static func postMessageEvent(messageIdentifier: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
 }
 public enum MessageResult {
-  case success([Message])
-  case failure(MessageCenterError)
+  case success([PWEngagement.Message])
+  case failure(PWEngagement.MessageCenterError)
 }
 public enum MessageReadResult {
   case success
-  case failure(MessageCenterError)
+  case failure(PWEngagement.MessageCenterError)
 }
 public enum MessageEventResult {
   case success
-  case failure(MessageCenterError)
+  case failure(PWEngagement.MessageCenterError)
 }
 public enum MessageCenterError : Swift.String, Swift.Error {
   case unableToComplete
@@ -56,7 +56,7 @@ public struct MessageRead : Swift.Codable {
   @objc final public let isRead: Swift.Bool
   @objc final public let timestamp: Foundation.Date?
   @objc public init(identifier: Swift.String, alertTitle: Swift.String, alertBody: Swift.String, promotionTitle: Swift.String?, promotionBody: Swift.String?, metaData: [Swift.String : Swift.String]?, campaignType: Swift.String, isRead: Swift.Bool, timestamp: Foundation.Date?)
-  @objc public static func unpack(dict: [Swift.String : Any]) -> (Message?)
+  @objc public static func unpack(dict: [Swift.String : Any]) -> (PWEngagement.Message?)
   required public init(from decoder: Swift.Decoder) throws
   @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   @objc deinit
