@@ -47,6 +47,7 @@ public struct MessageRead : Swift.Codable {
 }
 @objc @objcMembers public class Message : ObjectiveC.NSObject, Swift.Codable, Foundation.NSCopying {
   @objc final public let identifier: Swift.String?
+  @objc final public let campaignID: Swift.String?
   @objc final public let campaignType: Swift.String
   @objc final public let metaData: [Swift.String : Swift.String]?
   @objc final public let alertTitle: Swift.String
@@ -55,7 +56,7 @@ public struct MessageRead : Swift.Codable {
   @objc final public let promotionBody: Swift.String?
   @objc final public let isRead: Swift.Bool
   @objc final public let timestamp: Foundation.Date?
-  @objc public init(identifier: Swift.String, alertTitle: Swift.String, alertBody: Swift.String, promotionTitle: Swift.String?, promotionBody: Swift.String?, metaData: [Swift.String : Swift.String]?, campaignType: Swift.String, isRead: Swift.Bool, timestamp: Foundation.Date?)
+  @objc public init(identifier: Swift.String?, campaignID: Swift.String?, alertTitle: Swift.String, alertBody: Swift.String, promotionTitle: Swift.String?, promotionBody: Swift.String?, metaData: [Swift.String : Swift.String]?, campaignType: Swift.String, isRead: Swift.Bool, timestamp: Foundation.Date?)
   @objc public static func unpack(dict: [Swift.String : Any]) -> (PWEngagement.Message?)
   required public init(from decoder: Swift.Decoder) throws
   @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
