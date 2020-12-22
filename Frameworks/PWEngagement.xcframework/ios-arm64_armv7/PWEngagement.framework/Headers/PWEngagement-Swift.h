@@ -230,7 +230,6 @@ SWIFT_CLASS("_TtC12PWEngagement7Message")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
-@class NSError;
 
 @interface PWEngagement (SWIFT_EXTENSION(PWEngagement))
 + (void)postMessageEventWithMessageIdentifier:(NSString * _Nonnull)messageIdentifier completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
@@ -474,7 +473,6 @@ SWIFT_CLASS("_TtC12PWEngagement7Message")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
-@class NSError;
 
 @interface PWEngagement (SWIFT_EXTENSION(PWEngagement))
 + (void)postMessageEventWithMessageIdentifier:(NSString * _Nonnull)messageIdentifier completion:(void (^ _Nonnull)(NSError * _Nullable))completion;

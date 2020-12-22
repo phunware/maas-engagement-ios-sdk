@@ -16,6 +16,8 @@
 #import <PWEngagement/PWMistBeaconManager.h>
 #import <PWEngagement/PWVBLEManager.h>
 #import <PWEngagement/PWBeaconManager.h>
+#import <PWEngagement/PWMEDefines.h>
+#import <PWEngagement/PWMELogger.h>
 
 @class Message;
 

@@ -6,12 +6,12 @@ import PWCore
 @_exported import PWEngagement
 import Swift
 extension PWEngagement {
-  public static func fetchMessages(startDate: Foundation.Date, endDate: Foundation.Date, completion: @escaping (MessageResult) -> Swift.Void)
-  public static func markMessageAsRead(messageIdentifier: Swift.String, completion: @escaping (MessageReadResult) -> Swift.Void)
-  public static func markMessageAsUnread(messageIdentifier: Swift.String, completion: @escaping (MessageReadResult) -> Swift.Void)
+  public static func fetchMessages(startDate: Foundation.Date, endDate: Foundation.Date, completion: @escaping ([Message]?, Swift.Error?) -> Swift.Void)
+  public static func markMessageAsRead(messageIdentifier: Swift.String, completion: @escaping (Swift.Error?) -> Swift.Void)
+  public static func markMessageAsUnread(messageIdentifier: Swift.String, completion: @escaping (Swift.Error?) -> Swift.Void)
 }
 extension PWEngagement {
-  @objc public static func postMessageEvent(messageIdentifier: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public static func postMessageEvent(messageIdentifier: Swift.String, completion: @escaping (Swift.Error?) -> Swift.Void)
 }
 public enum MessageResult {
   case success([Message])
