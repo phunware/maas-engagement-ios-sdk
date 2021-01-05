@@ -1,7 +1,7 @@
 PWEngagement SDK for iOS
 ==================
 
->Version 3.8.1
+>Version 3.9.0
 
 This is Phunware's iOS SDK for Mobile Engagement, a location and notification-based system. Visit https://maas.phunware.com/ for more details and to sign up.
 

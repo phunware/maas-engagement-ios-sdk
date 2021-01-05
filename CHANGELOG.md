@@ -1,4 +1,8 @@
 # PWEngagement Changelog
+## 3.9.0 (Monday, January 4, 2021)
+#### Features
+* Added Message Center Service
+
 ## 3.8.1 (Thursday, November 5, 2020)
 #### Bug fixes / performance enhancements
 * Migrated Mist beacon provider into its own framework
