@@ -215,16 +215,16 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC12PWEngagement7Message")
 @interface Message : NSObject <NSCopying>
 @property (nonatomic, readonly, copy) NSString * _Nullable identifier;
-@property (nonatomic, readonly, copy) NSString * _Nullable campaignID;
+@property (nonatomic, readonly, copy) NSString * _Nonnull campaignID;
 @property (nonatomic, readonly, copy) NSString * _Nonnull campaignType;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable metaData;
-@property (nonatomic, readonly, copy) NSString * _Nonnull alertTitle;
-@property (nonatomic, readonly, copy) NSString * _Nonnull alertBody;
+@property (nonatomic, readonly, copy) NSString * _Nullable alertTitle;
+@property (nonatomic, readonly, copy) NSString * _Nullable alertBody;
 @property (nonatomic, readonly, copy) NSString * _Nullable promotionTitle;
 @property (nonatomic, readonly, copy) NSString * _Nullable promotionBody;
 @property (nonatomic, readonly) BOOL isRead;
 @property (nonatomic, readonly, copy) NSDate * _Nullable timestamp;
-- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier campaignID:(NSString * _Nullable)campaignID alertTitle:(NSString * _Nonnull)alertTitle alertBody:(NSString * _Nonnull)alertBody promotionTitle:(NSString * _Nullable)promotionTitle promotionBody:(NSString * _Nullable)promotionBody metaData:(NSDictionary<NSString *, NSString *> * _Nullable)metaData campaignType:(NSString * _Nonnull)campaignType isRead:(BOOL)isRead timestamp:(NSDate * _Nullable)timestamp OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier campaignID:(NSString * _Nonnull)campaignID alertTitle:(NSString * _Nullable)alertTitle alertBody:(NSString * _Nullable)alertBody promotionTitle:(NSString * _Nullable)promotionTitle promotionBody:(NSString * _Nullable)promotionBody metaData:(NSDictionary<NSString *, NSString *> * _Nullable)metaData campaignType:(NSString * _Nonnull)campaignType isRead:(BOOL)isRead timestamp:(NSDate * _Nullable)timestamp OBJC_DESIGNATED_INITIALIZER;
 + (Message * _Nullable)unpackWithDict:(NSDictionary<NSString *, id> * _Nonnull)dict SWIFT_WARN_UNUSED_RESULT;
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -459,16 +459,16 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC12PWEngagement7Message")
 @interface Message : NSObject <NSCopying>
 @property (nonatomic, readonly, copy) NSString * _Nullable identifier;
-@property (nonatomic, readonly, copy) NSString * _Nullable campaignID;
+@property (nonatomic, readonly, copy) NSString * _Nonnull campaignID;
 @property (nonatomic, readonly, copy) NSString * _Nonnull campaignType;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSString *> * _Nullable metaData;
-@property (nonatomic, readonly, copy) NSString * _Nonnull alertTitle;
-@property (nonatomic, readonly, copy) NSString * _Nonnull alertBody;
+@property (nonatomic, readonly, copy) NSString * _Nullable alertTitle;
+@property (nonatomic, readonly, copy) NSString * _Nullable alertBody;
 @property (nonatomic, readonly, copy) NSString * _Nullable promotionTitle;
 @property (nonatomic, readonly, copy) NSString * _Nullable promotionBody;
 @property (nonatomic, readonly) BOOL isRead;
 @property (nonatomic, readonly, copy) NSDate * _Nullable timestamp;
-- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier campaignID:(NSString * _Nullable)campaignID alertTitle:(NSString * _Nonnull)alertTitle alertBody:(NSString * _Nonnull)alertBody promotionTitle:(NSString * _Nullable)promotionTitle promotionBody:(NSString * _Nullable)promotionBody metaData:(NSDictionary<NSString *, NSString *> * _Nullable)metaData campaignType:(NSString * _Nonnull)campaignType isRead:(BOOL)isRead timestamp:(NSDate * _Nullable)timestamp OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier campaignID:(NSString * _Nonnull)campaignID alertTitle:(NSString * _Nullable)alertTitle alertBody:(NSString * _Nullable)alertBody promotionTitle:(NSString * _Nullable)promotionTitle promotionBody:(NSString * _Nullable)promotionBody metaData:(NSDictionary<NSString *, NSString *> * _Nullable)metaData campaignType:(NSString * _Nonnull)campaignType isRead:(BOOL)isRead timestamp:(NSDate * _Nullable)timestamp OBJC_DESIGNATED_INITIALIZER;
 + (Message * _Nullable)unpackWithDict:(NSDictionary<NSString *, id> * _Nonnull)dict SWIFT_WARN_UNUSED_RESULT;
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
