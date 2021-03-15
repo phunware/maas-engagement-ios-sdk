@@ -1,5 +1,5 @@
 # PWEngagement Changelog
-## 3.9.0 (Monday, January 4, 2021)
+## 3.9.0 (Monday, March 15, 2021)
 #### Features
 * Added Message Center Service
 
