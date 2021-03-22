@@ -33,7 +33,7 @@ class InfoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let notificationNames = [PWMEAddGeoZonesNotificationKey, PWMEModifyGeoZonesNotificationKey, PWMEDeleteGeoZonesNotificationKey, PWMEEnterGeoZoneNotificationKey, PWMEExitGeoZoneNotificationKey, PWMEMonitoredGeoZoneChangesNotificationKey, PWMEReceiveMessageNotificationKey, PWMELocationServiceReadyNotificationKey]
+        let notificationNames = [PWMEAddGeoZonesNotificationKey, PWMEModifyGeoZonesNotificationKey, PWMEDeleteGeoZonesNotificationKey, PWMEEnterGeoZoneNotificationKey, PWMEExitGeoZoneNotificationKey, PWMEMonitoredGeoZoneChangesNotificationKey, PWMELocationServiceReadyNotificationKey]
         for notificationName in notificationNames {
             NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: NSNotification.Name(rawValue: notificationName), object: nil)
         }
@@ -61,11 +61,22 @@ class InfoTableViewController: UITableViewController {
             self.deviceIdLabel.text = PWEngagement.deviceId()
             self.iosVersionLabel.text = UIDevice.current.systemVersion
             self.monitorRegionRadiusLabel.text = "50,000"
-            if let messages = PWEngagement.messages() {
-                self.messagesLabel.text = "\(messages.count)"
-            } else {
-                self.messagesLabel.text = "0"
+
+            PWEngagement.fetchMessages(startDate: Date(timeIntervalSinceNow: -MessageCenter.fetchPeriodInSeconds), endDate: Date()) { [weak self] (messages, error) in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        self?.messagesLabel.text = "0"
+                        print(error.localizedDescription)
+                        return
+                    }
+                    guard let messages = messages else {
+                        self?.messagesLabel.text = "0"
+                        return
+                    }
+                    self?.messagesLabel.text = "\(messages.count)"
+                }
             }
+
             self.buildVersionLabel.text = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
             if let geozones = PWEngagement.geozones() {
                 self.zonesLabel.text = "\(geozones.count)"
@@ -90,6 +101,8 @@ class InfoTableViewController: UITableViewController {
             environmentString = "Stage"
         case .prod:
             environmentString = "Prod"
+        @unknown default:
+            fatalError("An environment is required.")
         }
         return environmentString
     }

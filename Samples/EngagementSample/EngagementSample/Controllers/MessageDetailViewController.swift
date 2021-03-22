@@ -11,7 +11,7 @@ import UIKit
 import WebKit
 import PWEngagement
 
-extension PWMEZoneMessage {
+extension Message {
     
     func formattedTimestamp() -> String? {
         var formattedTimestamp: String?
@@ -27,7 +27,7 @@ extension PWMEZoneMessage {
 
 class MessageDetailViewController: UIViewController {
     
-    var message: PWMEZoneMessage!
+    var message: Message!
     
     @IBOutlet weak var rawDataLabel: UILabel!
     @IBOutlet weak var webContentView: UIView!
@@ -39,8 +39,15 @@ class MessageDetailViewController: UIViewController {
         configureWebView()
 
         if message.isRead == false {
-            message.read()
+            if let identifier = message.identifier {
+                PWEngagement.markMessageAsRead(messageIdentifier: identifier) { (error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
         }
+        
         let titleAttributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: UIFont.systemFontSize)]
         let valueAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: UIFont.systemFontSize), NSAttributedString.Key.foregroundColor : UIColor.gray]
         let text = NSMutableAttributedString(string: "", attributes: titleAttributes)
@@ -56,14 +63,20 @@ class MessageDetailViewController: UIViewController {
             text.append(NSAttributedString(string: "\nReceived at:\n", attributes: titleAttributes))
             text.append(NSAttributedString(string: formattedTimestamp, attributes: valueAttributes))
         }
-        text.append(NSAttributedString(string: "\nAlert title:\n", attributes: titleAttributes))
-        text.append(NSAttributedString(string: message.alertTitle, attributes: valueAttributes))
-        text.append(NSAttributedString(string: "\nAlert body:\n", attributes: titleAttributes))
-        text.append(NSAttributedString(string: message.alertBody, attributes: valueAttributes))
         
-        if message.metaData.count > 0 {
+        if let alertTitle = message.alertTitle {
+            text.append(NSAttributedString(string: "\nAlert title:\n", attributes: titleAttributes))
+            text.append(NSAttributedString(string: alertTitle, attributes: valueAttributes))
+        }
+        
+        if let alertBody = message.alertBody {
+            text.append(NSAttributedString(string: "\nAlert body:\n", attributes: titleAttributes))
+            text.append(NSAttributedString(string: alertBody, attributes: valueAttributes))
+        }
+        
+        if let metaData = message.metaData, metaData.count > 0 {
             text.append(NSAttributedString(string: "\nMeta data:\n", attributes: titleAttributes))
-            text.append(NSAttributedString(string: String(describing: message.metaData), attributes: valueAttributes))
+            text.append(NSAttributedString(string: String(describing: metaData), attributes: valueAttributes))
         }
         if let promotionTitle = message.promotionTitle {
             text.append(NSAttributedString(string: "\nPromotion title:\n", attributes: titleAttributes))
@@ -86,10 +99,5 @@ class MessageDetailViewController: UIViewController {
         previewWebView.trailingAnchor.constraint(equalTo: webContentView.trailingAnchor).isActive = true
         previewWebView.topAnchor.constraint(equalTo: webContentView.topAnchor).isActive = true
         previewWebView.bottomAnchor.constraint(equalTo: webContentView.bottomAnchor).isActive = true
-    }
-    
-    @IBAction func remove(_ sender: UIBarButtonItem) {
-        message.remove()
-        self.navigationController?.popViewController(animated: true)
     }
 }

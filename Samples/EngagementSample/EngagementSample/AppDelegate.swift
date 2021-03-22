@@ -95,14 +95,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             if let message = message {
                 self?.deeplink(message: message)
             }
+            
+            completionHandler()
         }
-        completionHandler()
     }
 }
 
 extension AppDelegate {
     
-    func deeplink(message: PWMEZoneMessage) {
+    func deeplink(message: Message) {
         
         if let tabbarController = window?.rootViewController as? UITabBarController {
             tabbarController.selectedIndex = 2

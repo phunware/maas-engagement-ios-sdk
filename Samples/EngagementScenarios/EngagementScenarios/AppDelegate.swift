@@ -8,7 +8,6 @@
 
 import UIKit
 import PWEngagement
-import PWCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

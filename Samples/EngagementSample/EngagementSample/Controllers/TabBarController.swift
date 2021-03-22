@@ -10,11 +10,9 @@ import UIKit
 import PWEngagement
 
 class TabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMessages(_:)), name: NSNotification.Name(rawValue: PWMEReceiveMessageNotificationKey), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMessages(_:)), name: NSNotification.Name(rawValue: PWMEReadMessageNotificationKey), object: nil)
         
         badgeMessagesTabBarItem()
     }
@@ -34,12 +32,24 @@ class TabBarController: UITabBarController {
         
         for viewController in viewControllers {
             if let navController = viewController as? UINavigationController, navController.viewControllers.first is MessagesViewController {
-                if let messages = PWEngagement.messages() {
-                    let unreadMessages = messages.filter({ $0.isRead == false }).count
-                    if unreadMessages > 0 {
-                        navController.tabBarItem.badgeValue = "\(unreadMessages)"
-                    } else {
-                        navController.tabBarItem.badgeValue = nil
+
+                PWEngagement.fetchMessages(startDate: Date(timeIntervalSinceNow: -MessageCenter.fetchPeriodInSeconds), endDate: Date()) { (messages, error) in
+                    DispatchQueue.main.async {
+                        if let err = error {
+                            print(err.localizedDescription)
+                            navController.tabBarItem.badgeValue = nil
+                            return
+                        }
+                        guard let messages = messages else {
+                            navController.tabBarItem.badgeValue = nil
+                            return
+                        }
+                        let unreadMessages = messages.filter({ $0.isRead == false }).count
+                        if unreadMessages > 0 {
+                            navController.tabBarItem.badgeValue = "\(unreadMessages)"
+                        } else {
+                            navController.tabBarItem.badgeValue = nil
+                        }
                     }
                 }
             }
