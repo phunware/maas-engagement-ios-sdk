@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <PWEngagement/PWMEZoneMessage.h>
 
+@class Message;
+
 extern NSString *const PWMELocalNotificationSendNotification;
 
 // UserInfo dictionary keys
@@ -39,6 +41,6 @@ extern NSString *const PWMELocalNotificationUserInfoAlertBodyKey;
  The zone message associated with the local notification.
  @return The zone message associated with the local notification.
  */
-@property (readonly) PWMEZoneMessage *message;
+@property (readonly) Message *message;
 
 @end

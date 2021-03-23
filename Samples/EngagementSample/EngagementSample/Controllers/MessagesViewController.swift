@@ -28,19 +28,19 @@ class MessagesViewController: UIViewController {
         }
     }
     
-    var allMessages: [PWMEZoneMessage]? {
+    var allMessages: [Message]? {
         didSet {
             refreshDisplayMessages()
         }
     }
     
-    private var messages: [PWMEZoneMessage]? {
+    private var messages: [Message]? {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var selectedMessage: PWMEZoneMessage?
+    var selectedMessage: Message?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +49,12 @@ class MessagesViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = image
         navigationController?.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
         
-        allMessages = PWEngagement.messages()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMessages(_:)), name: NSNotification.Name(rawValue: PWMEReceiveMessageNotificationKey), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMessages(_:)), name: NSNotification.Name(rawValue: PWMEModifyMessageNotificationKey), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMessages(_:)), name: NSNotification.Name(rawValue: PWMEDeleteMessageNotificationKey), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMessages(_:)), name: NSNotification.Name(rawValue: PWMEReadMessageNotificationKey), object: nil)
+        self.updateMessages(nil)
     }
     
     deinit {
@@ -82,9 +82,20 @@ class MessagesViewController: UIViewController {
         selectedSegmentedControlIndex = segmentedControlIndexes[segmentedControl.selectedSegmentIndex]
     }
 
-    @objc func updateMessages(_ notification: NSNotification) {
-        allMessages = PWEngagement.messages()
-        tableView.reloadData()
+    @objc func updateMessages(_ notification: NSNotification?) {
+        PWEngagement.fetchMessages(startDate: Date(timeIntervalSinceNow: -MessageCenter.fetchPeriodInSeconds), endDate: Date()) { [weak self] (messages, error) in
+            DispatchQueue.main.async {
+                if let err = error {
+                    print(err.localizedDescription)
+                    return
+                }
+                guard let messages = messages else {
+                    return
+                }
+                self?.allMessages = messages
+                self?.tableView.reloadData()
+            }
+        }
     }
 }
 

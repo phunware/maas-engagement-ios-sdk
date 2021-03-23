@@ -1,4 +1,29 @@
 # PWEngagement Migration Guide
+## Upgrade from 3.8.x to 3.9.x
+
+#### General
+
+This release adds API for Message Center Service.
+
+#### CHANGE Detail
+
+#### PWEnagement
+
+*ADDED*
+
+*`static func fetchMessages(startDate: Date, endDate: Date, completion: @escaping (_ messages: [Message]?, _ error: Error?) -> Void)`
+*`static func markMessageAsRead(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)` 
+*`static func markMessageAsUnread(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
+*`static func postMessageEvent(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
+
+#### Upgrade Steps
+
+1. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.9.x'`, then run `pod update` in the Terminal to update the framework.
+
+#### Using Subspecs
+
+1. Open the `Podfile` from your project and add a new pod dependency for each supported beacon provider subspec by using the following format:  `pod 'PWEngagement/<provider>', '3.9.x'`. Finally, run `pod install` in the Terminal to install the beacon provider subspec framework(s).
+
 ## Upgrade from 3.7.x to 3.8.x
 
 #### General

@@ -7,23 +7,27 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Campaign type string value for geofence entry campaigns.
  */
-static NSString *const PWMEZoneMessageGeofenceEntryCampaignType   = @"GEOFENCE_ENTRY";
+static NSString *const PWMEZoneMessageGeofenceEntryCampaignType = @"GEOFENCE_ENTRY";
+
 /**
  * Campaign type string value for geofence exit campaigns.
  */
-static NSString *const PWMEZoneMessageGeofenceExitCampaignType    = @"GEOFENCE_EXIT";
+static NSString *const PWMEZoneMessageGeofenceExitCampaignType = @"GEOFENCE_EXIT";
+
 /**
  * Campaign type string value for broadcast campaigns.
  */
-static NSString *const PWMEZoneMessageBroadCastCampaignType         = @"BROADCAST";
+static NSString *const PWMEZoneMessageBroadCastCampaignType = @"BROADCAST";
+
 /**
  * Campaign type string value for on-demond broadcast campaigns.
  */
 static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAND_BROADCAST";
-
 
 
 /**
@@ -31,13 +35,11 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
  */
 @interface PWMEZoneMessage : NSObject <NSSecureCoding, NSCopying>
 
-
 /**
  Returns the alert title of this message.
  @return The alert title of this message.
  */
 @property (readonly, nonnull) NSString *alertTitle;
-
 
 /**
  Returns the alert body of this message.
@@ -45,13 +47,11 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
  */
 @property (readonly, nonnull) NSString *alertBody;
 
-
 /**
  Returns the promotion title of this message.
  @return The promotion title of this message.
  */
 @property (readonly, nullable) NSString *promotionTitle;
-
 
 /**
  Returns the promotion body of this message. The value returned by this method is usually HTML.
@@ -59,7 +59,6 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
  @return The body of this message.
  */
 @property (readonly, nullable) NSString *promotionBody;
-
 
 /**
  Returns the metadata associated with the message.
@@ -75,13 +74,6 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
 @property (readonly, nullable) NSString *identifier;
 
 /**
- A Boolean value indicating whether or not the entry is read.
- @discussion A message is only considered read if it has been marked as such by the application. To mark this message as read, pass this message to the `PWMEZoneMessageManager` `readMessage:` method.
- @return A Boolean value indicating whether or not the message has been read.
- */
-@property (readonly) BOOL isRead;
-
-/**
  A string containing the campaign type of the message.
  @return A string containing the campaign type of the message.
  */
@@ -93,14 +85,6 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
  */
 @property (readonly, nullable) NSDate *timestamp;
 
-/**
- Deletes this message.
- */
-- (void)remove;
-
-/**
- Marks this message as read.
- */
-- (void)read;
-
 @end
+
+NS_ASSUME_NONNULL_END

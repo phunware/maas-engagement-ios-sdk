@@ -82,34 +82,30 @@ class ProfileAttributesTableViewController: UITableViewController {
     func refreshAttributes() {
         displayLoadingAlert(message: "Updating Attributes...")
         PWMEAttributeManager.shared().fetchProfileAttributeMetadata { [weak self] (attributeMetadata, error) in
-            if let error = error {
-                self?.dismiss(animated: true, completion: nil)
-                self?.displayErrorAlert(message: error.localizedDescription)
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let error = error {
+                    self?.dismiss(animated: true, completion: nil)
+                    self?.displayErrorAlert(message: error.localizedDescription)
                     self?.refreshControl?.endRefreshing()
-                }
-            } else {
-                if let attributeMetadata = attributeMetadata as? [[String: Any]] {
-                    self?.attributeMetadata = attributeMetadata.sorted(by: { ($0[AttributeKey.name.rawValue] as! String).lowercased() < ($1[AttributeKey.name.rawValue] as! String).lowercased() })
-                }
-                PWMEAttributeManager.shared().fetchProfileAttributes(completion: { [weak self] (deviceAttributes, error) in
-                    if let error = error {
-                        self?.dismiss(animated: true, completion: nil)
-                        self?.displayErrorAlert(message: error.localizedDescription)
-                    } else {
-                        if let deviceAttributes = deviceAttributes as? [String: String] {
-                            self?.deviceAttributes = deviceAttributes
-                        }
-                        DispatchQueue.main.async {
+                } else {
+                    if let attributeMetadata = attributeMetadata as? [[String: Any]] {
+                        self?.attributeMetadata = attributeMetadata.sorted(by: { ($0[AttributeKey.name.rawValue] as! String).lowercased() < ($1[AttributeKey.name.rawValue] as! String).lowercased() })
+                    }
+                    PWMEAttributeManager.shared().fetchProfileAttributes(completion: { [weak self] (deviceAttributes, error) in
+                        if let error = error {
+                            self?.dismiss(animated: true, completion: nil)
+                            self?.displayErrorAlert(message: error.localizedDescription)
+                        } else {
+                            if let deviceAttributes = deviceAttributes as? [String: String] {
+                                self?.deviceAttributes = deviceAttributes
+                            }
                             self?.tableView.reloadData()
                             self?.dismiss(animated: true, completion: nil)
                             self?.hasPendingChanges = false
                         }
-                    }
-                    DispatchQueue.main.async {
                         self?.refreshControl?.endRefreshing()
-                    }
-                })
+                    })
+                }
             }
         }
     }
@@ -123,7 +119,7 @@ class ProfileAttributesTableViewController: UITableViewController {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = .gray
+        loadingIndicator.style = .medium
         loadingIndicator.startAnimating()
         
         alertController.view.addSubview(loadingIndicator)
