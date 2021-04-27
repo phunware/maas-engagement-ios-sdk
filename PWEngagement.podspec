@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PWEngagement"
-  s.version      = "3.9.0"
+  s.version      = "3.10.0"
   s.summary      = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
   s.homepage     = "http://phunware.github.io/maas-engagement-ios-sdk/"
   s.author       = { 'Phunware, Inc.' => 'http://www.phunware.com' }
@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
   s.default_subspec = 'all-frameworks'
 
   s.subspec 'all-frameworks' do |sub|
-    sub.dependency 'PWCore', '~> 3.10.0'
-    sub.dependency 'PWCore/DeviceIdentity', '~> 3.10.0'
+    sub.dependency 'PWCore', '~> 3.11.0'
+    sub.dependency 'PWCore/DeviceIdentity', '~> 3.11.0'
   end
   
   s.subspec 'LimitedDeviceIdentity' do |sub|

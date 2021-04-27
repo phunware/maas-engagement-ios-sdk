@@ -21,7 +21,7 @@
 
 @class Message;
 
-static NSString *const PWEngagementVersion = @"3.9.0";
+static NSString *const PWEngagementVersion = @"3.10.0";
 
 /**
  The message identifier key which may be included in the notification's userInfo dictionary.
