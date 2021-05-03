@@ -1,7 +1,8 @@
 # PWEngagement Changelog
 ## 3.10.0 (TBD)
 #### Features
-* Update to PWCore 3.11.0
+* Updated to PWCore 3.11.0
+* Updated iOS deployment target to 12.0
 
 ## 3.9.0 (Monday, March 15, 2021)
 #### Features

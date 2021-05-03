@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Phunware, Inc.' => 'http://www.phunware.com' }
   s.social_media_url = 'https://twitter.com/Phunware'
 
-  s.platform     = :ios, '10.0'
+  s.platform     = :ios, '12.0'
   s.source       = { :git => "https://github.com/phunware/maas-engagement-ios-sdk.git", :tag => "v#{s.version}" }
   s.license      = { :type => 'Copyright', :text => 'Copyright 2009-present Phunware Inc. All rights reserved.' }
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'MistBeaconProvider' do |sub|
     sub.ios.vendored_frameworks = 'Frameworks/MistBeaconProvider.xcframework'
-    sub.dependency 'MistSDKDR', '1.5.272'
+    sub.dependency 'MistSDKDR', '1.5.280'
     sub.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
     sub.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   end
