@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'LimitedDeviceIdentity' do |sub|
     sub.ios.vendored_frameworks = 'Frameworks/PWEngagement.xcframework'
-    sub.dependency 'PWCore', '~> 3.10.0'
+    sub.dependency 'PWCore', '~> 3.11.0'
   end
 
   s.subspec 'MistBeaconProvider' do |sub|
