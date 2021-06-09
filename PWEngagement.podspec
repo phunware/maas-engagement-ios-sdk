@@ -11,8 +11,6 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'Copyright', :text => 'Copyright 2009-present Phunware Inc. All rights reserved.' }
 
   s.ios.vendored_frameworks = 'Frameworks/PWEngagement.xcframework'
-
-  s.ios.dependency 'FMDB'
         
   s.default_subspec = 'all-frameworks'
 
