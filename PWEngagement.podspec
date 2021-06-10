@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url = 'https://twitter.com/phunware'
   
   spec.platform = :ios, '12.0'
-  spec.source = { :git => "https://github.com/phunware/maas-engagement-ios-sdk.git", :tag => "v#{s.version}" }
+  spec.source = { :git => "https://github.com/phunware/maas-engagement-ios-sdk.git", :tag => "v#{spec.version}" }
   spec.documentation_url = 'http://phunware.github.io/maas-engagement-ios-sdk/'
 
   spec.default_subspecs =
