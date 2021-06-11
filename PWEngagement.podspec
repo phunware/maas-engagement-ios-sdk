@@ -4,12 +4,12 @@ Pod::Spec.new do |spec|
   spec.license = { :type => 'Copyright', :text => 'Copyright 2009-present Phunware Inc. All rights reserved.' }
   spec.summary = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
   spec.homepage = 'https://github.com/phunware/maas-engagement-ios-sdk/'
-  spec.author = { 'Phunware, Inc.' => 'http://www.phunware.com' }
+  spec.author = { 'Phunware, Inc.' => 'https://www.phunware.com' }
   spec.social_media_url = 'https://twitter.com/phunware'
   
   spec.platform = :ios, '12.0'
   spec.source = { :git => "https://github.com/phunware/maas-engagement-ios-sdk.git", :tag => "v#{spec.version}" }
-  spec.documentation_url = 'http://phunware.github.io/maas-engagement-ios-sdk/'
+  spec.documentation_url = 'https://phunware.github.io/maas-engagement-ios-sdk/'
 
   spec.default_subspecs =
     'Core',
