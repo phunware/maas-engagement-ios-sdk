@@ -21,6 +21,8 @@
 
 @class Message;
 
+NS_ASSUME_NONNULL_BEGIN
+
 static NSString *const PWEngagementVersion = @"3.10.0";
 
 /**
@@ -82,60 +84,60 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
  * The mobile engagement framework is a location and notification based system.
  *
  * The recommended way to start mobile engagement in your application is to place a call
- * to `+startWithmaasAppId:accessKey:signatureKey:encryptionKey:completion:` in your `-application:didFinishLaunchingWithOptions:` method.
+ * to `+startWithMaasAppId:accessKey:signatureKey:completion:` in your `-application:didFinishLaunchingWithOptions:` method.
  *
  * This delay defaults to 1 second in order to generally give the application time to
  * fully finish launching.
  *
- * The framework needs you to forward the following methods from your application delegate:
+ * The framework needs you to forward the following methods from your app delegate:
  *
  * - 'didFinishLaunchingWithOptions:withCompletionHandler:'
  * - 'didRegisterForRemoteNotificationsWithDeviceToken:withNotificationHandler:'
  * - 'didFailToRegisterForRemoteNotificationsWithError:withNotificationHandler:'
- * - 'didReceiveRemoteNotification:withNotificationHandler:'
+ * - 'didReceiveRemoteNotification:fetchCompletionHandler:'
  *
  * You can optionally add a delegate to be informed about errors while initializing the mobile engagement service and to control the display of local notifications to the user.
  **/
 @interface PWEngagement : NSObject
 
 /**
- * Starts the mobile engagement service with environment.
- * @param maasAppId You can find your Application ID in the MaaS portal.
+ * Starts the mobile engagement service.
+ * @param appId You can find your Application ID in the MaaS portal.
  * @param accessKey A unique key that identifies the client making the request. You can find your Access Key in the MaaS portal.
  * @param signatureKey A unique key that is used to sign requests. The signature is used to both check request authorization as well as data integrity. You can find your Signature Key in the MaaS portal.
  * @param completion A block that notify mobile engagement service is successfully started or failed to start with reason.
  *      - *param1* error It's nil when it's started successfully, or an error object containing information about a problem that indicates mobile engagement service failed to start.
  */
-+ (void)startWithMaasAppId:(NSString *)maasAppId
++ (void)startWithMaasAppId:(NSString *)appId
 				 accessKey:(NSString *)accessKey
 			  signatureKey:(NSString *)signatureKey
-				completion:(void(^)(NSError *error))completion;
+				completion:(void(^)(NSError * _Nullable error))completion;
 
 /**
- * Stop mobile engagement service.
+ * Stops the mobile engagement service.
  * @param completion A block that notify mobile engagement service is successfully stopped or failed to stop with reason.
  *
  *      - *error* It's nil when it's stopped successfully, or an error object containing information about a problem that indicates mobile engagement service failed to stop.
  */
-+ (void)stopWithCompletion:(void(^)(NSError *error))completion;
++ (void)stopWithCompletion:(void(^)(NSError * _Nullable error))completion;
 
 /**
- * All the available `PWMEGeozone` list.
+ * @return A list of all available geozones.
  */
-+ (NSArray<PWMEGeozone *> *)geozones;
++ (NSArray<PWMEGeozone *> * _Nullable)geozones;
 
 /**
- * Return the device identifier which the mobile engagement service uses.
+ * @return The device identifier used by the mobile engagement service.
  */
 + (NSString *)deviceId;
 
 /**
- * Return the current SDK version of mobile engagement.
+ * @return The version of the mobile engagement service.
  */
 + (NSString *)version;
 
 /**
- * The name of the mobile engagement service.
+ * @return The name of the mobile engagement service.
  */
 + (NSString *)serviceName;
 
@@ -146,7 +148,7 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
  *
  *      - *error* An error object containing information about a problem that indicates mobile engagement service failed if the results are retrieved successfully.
  */
-+ (void)setErrorHandler:(void(^)(NSError *error))handler;
++ (void)setErrorHandler:(nullable void(^)(NSError *error))handler;
 
 /**
  * Set the block to handle the local notification which is about to display.
@@ -155,7 +157,7 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
  *
  *      - *notification* The `PWMELocalNotification` object which contains notification information to display.
  */
-+ (void)setLocalNotificationHandler:(BOOL(^)(PWMELocalNotification *notification))handler;
++ (void)setLocalNotificationHandler:(nullable BOOL(^)(PWMELocalNotification *notification))handler;
 
 /**
  * Lets the mobile engagement service know that launch process is almost done and the app is almost ready to run.(APNs).
@@ -165,7 +167,7 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
  *
  *      - *notification* The notification object if user open the app by tapping a notification from notification tray, otherwise, it's nil.
  */
-+ (void)didFinishLaunchingWithOptions:(NSDictionary *)launchOptions withCompletionHandler:(BOOL(^)(PWMELocalNotification *notification))completionHandler;
++ (void)didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions withCompletionHandler:(BOOL(^)(PWMELocalNotification * _Nullable notification))completionHandler;
 
 /**
  * Lets the mobile engagement service know that the app successfully registered with Apple Push Notification service (APNs).
@@ -175,49 +177,41 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
 
 /**
  * Lets the mobile engagement service know that the Apple Push Notification service cannot successfully complete the registration process.
- * @param error An NSError object that encapsulates information why registration did not succeed. The app can choose to display this information to the user.
+ * @param error A NSError that encapsulates information why registration did not succeed. The app can choose to display this information to the user.
  */
 + (void)didFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
 
 /**
- * Lets the mobile engagement service know that the app receives a local notification, so that it can process it internally.
- * @discussion The message deep linking could be fired from the `completion` block. This method is deprecated since iOS 10, please use `didReceiveNotification:withNotificationHandler:` instead.
- * @param notification A `UILocalNotification` object.
- * @param notificationHandler A block that tells the notification with message which was received.
- *      - *notification* The notification object which was received.
+ * Lets the mobile engagement service know that a notification arrived while the app was running in the foreground and will be presented.
+ *
+ * This method must be called at some point within the shared notification center delegate's @b userNotificationCenter:willPresentNotification:withCompletionHandler: method.
+ *
+ * @remarks Do not call this method if @c UNNotificationPresentationOptionNone is specified to silence the notification completely.
+ *
+ * @param notification The notification that is about to be presented. This object is provided by the shared notification center delegate.
+ * @param completion A block that returns the message associated with the notification, or an error.
  */
-+ (void)didReceiveLocalNotification:(UILocalNotification *)notification withNotificationHandler:(void(^)(PWMELocalNotification *notification))notificationHandler __deprecated;
++ (void)willPresentNotification:(UNNotification *)notification withCompletion:(void(^)(Message * _Nullable message, NSError * _Nullable error))completion;
 
 /**
- * Lets the mobile engagement service know that the app receives a remote notification, so that it can process it internally.
- * @discussion The message deep linking could be fired from the `notificationHandler` block. This method is deprecated since iOS 10, please use `didReceiveNotification:withNotificationHandler:` instead.
- * @param userInfo A dictionary that contains information related to the remote notification, potentially including a badge number for the app icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that iOS converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull.
- * @param notificationHandler A block that tells the notification with message which was received.
+ * Lets the mobile engagement service know that a user has responded to a notification which arrived while the app was running in the foreground.
  *
- *      - *notification* The notification object which was received.
+ * This method must be called at some point within the shared notification center delegate's @b userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler: method.
+ *
+ * @param response The user’s response to the notification. This object is provided by the shared notification center delegate.
+ * @param completion A block that returns the message associated with the original notification, or an error.
  */
-+ (void)didReceiveRemoteNotification:(NSDictionary *)userInfo withNotificationHandler:(void(^)(PWMELocalNotification *notification))notificationHandler __deprecated;
++ (void)didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletion:(void(^)(Message * _Nullable message, NSError * _Nullable error))completion;
 
 /**
- * Lets the mobile engagement service know that the app receives a remote notification, so that it can process it internally.
- * @discussion The message deep linking could be fired from the `notificationHandler` block. This method is deprecated since iOS 10, please use `didReceiveNotification:withNotificationHandler:` instead.
- * @param userInfo A dictionary that contains information related to the remote notification, potentially including a badge number for the app icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that iOS converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull. 
- * @param completionHandler The block to execute when the download operation is complete. When calling this block, pass in the fetch result value that best describes the results of your download operation. You must call this handler and should do so as soon as possible. For a list of possible values, see the UIBackgroundFetchResult type.
+ * Lets the mobile engagement service know that a notification arrived.
  *
- *      - *userInfo* A dictionary that contains information related to the remote notification, potentially including a badge number for the app icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that iOS converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull.
- * @param notificationHandler A block that tells the notification with message which was received.
+ * This method must be called at some point within your app delegate's  @b application:didReceiveRemoteNotification:fetchCompletionHandler: method.
  *
- *      - *notification*: The notification object which was received.
+ * @param userInfo The user information dictionary associated with the notification. This object is provided by your app delegate.
+ * @param completion A block that returns the message associated with the notification, or an error.
  */
-+ (void)didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler withNotificationHandler:(void(^)(PWMELocalNotification *notification))notificationHandler __deprecated;
-
-/**
- * Lets the mobile engagement service know that the app receives a notification, so that it can process it internally, typically when you receive a notification in `application:didReceiveRemoteNotification:fetchCompletionHandler:`, `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` and `userNotificationCenter:willPresentNotification:withCompletionHandler:`.
- * @param userInfo A dictionary that contains information related to the remote notification, potentially including a badge number for the app icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that iOS converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull.
- * @param completion A block that returns the notification with the received message or error.
- * @discussion The message deep linking could be fired from the `notificationHandler` block.
- */
-+ (void)didReceiveNotification:(NSDictionary *)userInfo withCompletion:(void(^)(Message *message, NSError *error))completion;
++ (void)didReceiveRemoteNotification:(NSDictionary *)userInfo withCompletion:(nullable void(^)(Message * _Nullable message, NSError * _Nullable error))completion;
 
 /**
  * Set the static identifier to be registered with the current device.
@@ -225,11 +219,11 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
  * @param staticIdentifier The identifier that will be associated with the current device identifier.
  * @param completion The block that notifies the user when static identifier registration is complete, and whether or not there was an error on the registration request.
  */
-+ (void)setStaticIdentifier:(NSString *)staticIdentifier completion:(void(^)(NSError *error))completion;
++ (void)setStaticIdentifier:(NSString *)staticIdentifier completion:(void(^)(NSError * _Nullable error))completion;
 
 /**
- * This method has been deprecated.
  * Starts the mobile engagement service with environment.
+ * @remarks This method has been deprecated.
  * @param maasAppId You can find your Application ID in the MaaS portal.
  * @param accessKey A unique key that identifies the client making the request. You can find your Access Key in the MaaS portal.
  * @param signatureKey A unique key that is used to sign requests. The signature is used to both check request authorization as well as data integrity. You can find your Signature Key in the MaaS portal.
@@ -241,6 +235,8 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
 				 accessKey:(NSString *)accessKey
 			  signatureKey:(NSString *)signatureKey
 			 encryptionKey:(NSString *)encryptionKey
-				completion:(void(^)(NSError *error))completion __deprecated;
+				completion:(void(^)(NSError * _Nullable error))completion __deprecated;
 
 @end
+
+NS_ASSUME_NONNULL_END
