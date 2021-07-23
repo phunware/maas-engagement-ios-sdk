@@ -7,8 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class Message;
-
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -86,11 +84,6 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
  @return the timestamp identifying when the message is saved.
  */
 @property (readonly, nullable) NSDate *timestamp;
-
-/**
- Creates a Message object from a notification's userInfo dictionary.
- */
-+ (Message *_Nullable)messageFromUserInfo:(NSDictionary *)userInfo;
 
 @end
 

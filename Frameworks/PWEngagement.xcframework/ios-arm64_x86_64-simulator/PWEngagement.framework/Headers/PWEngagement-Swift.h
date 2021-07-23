@@ -192,7 +192,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
-@import UIKit;
 #endif
 
 #import <PWEngagement/PWEngagement.h>
@@ -237,18 +236,6 @@ SWIFT_CLASS("_TtC12PWEngagement7Message")
 + (void)postMessageEventWithMessageIdentifier:(NSString * _Nonnull)messageIdentifier completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 @end
 
-
-@class UNNotification;
-@class UNNotificationResponse;
-
-SWIFT_CLASS("_TtC12PWEngagement23PushNotificationTracker")
-@interface PushNotificationTracker : NSObject
-+ (void)didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
-+ (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
-+ (void)willPresent:(UNNotification * _Nonnull)notification;
-+ (void)didReceive:(UNNotificationResponse * _Nonnull)response;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -449,7 +436,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
-@import UIKit;
 #endif
 
 #import <PWEngagement/PWEngagement.h>
@@ -494,18 +480,6 @@ SWIFT_CLASS("_TtC12PWEngagement7Message")
 + (void)postMessageEventWithMessageIdentifier:(NSString * _Nonnull)messageIdentifier completion:(void (^ _Nonnull)(NSError * _Nullable))completion;
 @end
 
-
-@class UNNotification;
-@class UNNotificationResponse;
-
-SWIFT_CLASS("_TtC12PWEngagement23PushNotificationTracker")
-@interface PushNotificationTracker : NSObject
-+ (void)didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
-+ (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
-+ (void)willPresent:(UNNotification * _Nonnull)notification;
-+ (void)didReceive:(UNNotificationResponse * _Nonnull)response;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
