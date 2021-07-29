@@ -10,7 +10,6 @@ import UserNotifications
 import UIKit
 import CoreLocation
 
-import PWCore
 import PWEngagement
 
 class InfoTableViewController: UITableViewController {
@@ -93,7 +92,7 @@ class InfoTableViewController: UITableViewController {
     }
     
     func environmentString(_ environment: PWEnvironment) -> String {
-        var environmentString = ""
+        let environmentString: String
         switch environment {
         case .dev:
             environmentString = "Dev"
@@ -101,8 +100,6 @@ class InfoTableViewController: UITableViewController {
             environmentString = "Stage"
         case .prod:
             environmentString = "Prod"
-        @unknown default:
-            fatalError("An environment is required.")
         }
         return environmentString
     }

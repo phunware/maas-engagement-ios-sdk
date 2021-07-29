@@ -8,7 +8,6 @@
 
 import UIKit
 
-import PWCore
 import UserNotifications
 import PWEngagement
 

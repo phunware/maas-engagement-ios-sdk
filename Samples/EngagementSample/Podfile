@@ -5,5 +5,5 @@ inhibit_all_warnings!
 target 'EngagementSample' do
   use_frameworks!
 
-  pod 'PWEngagement', '~> 3.9.0'
+  pod 'PWEngagement', '~> 3.10.0'
 end
