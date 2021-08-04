@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'PWEngagement'
-  spec.version = '3.10.0'
+  spec.version = '3.11.0'
   spec.license = { :type => 'Copyright', :text => 'Copyright 2009-present Phunware Inc. All rights reserved.' }
   spec.summary = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
   spec.homepage = 'https://github.com/phunware/maas-engagement-ios-sdk/'
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
     'DeviceIdentity'
 
   spec.subspec 'Core' do |subspec|
-    subspec.dependency 'PWCore', '~> 3.11.0'
+    subspec.dependency 'PWCore', '~> 3.12.0'
     subspec.dependency 'FMDB/SQLCipher', '~> 2.7.0'
 
     subspec.vendored_frameworks = 'Frameworks/PWEngagement.xcframework'
@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'DeviceIdentity' do |subspec|
     subspec.dependency 'PWEngagement/Core'
-    subspec.dependency 'PWCore/DeviceIdentity', '~> 3.11.0'
+    subspec.dependency 'PWCore/DeviceIdentity', '~> 3.12.0'
   end
   
   spec.subspec 'LimitedDeviceIdentity' do |subspec|

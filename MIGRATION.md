@@ -1,15 +1,33 @@
 # PWEngagement Migration Guide
+
 ## Upgrade from 3.9.x to 3.10.x
 
 #### General
 
-The iOS deployment target of PWEngagement is now 13.0 instead of 10.0. To be compatible with PWEngagement, an application must have a minimum iOS deployment target of 13.0 as well.
+The iOS deployment target of PWEngagement is now 12.0 instead of 10.0. To be compatible with PWEngagement, an application must have a minimum iOS deployment target of 12.0 as well.
+
+#### PWEngagement
+
+*ADDED*
+
+* `static func willPresent(_ notification: UNNotification?, withCompletion completion: @escaping (Message?, Error?) -> Void)`
+* `static func didReceive(_ response: UNNotificationResponse?, withCompletion completion: @escaping (Message?, Error?) -> Void)`
+* `static func didReceiveRemoteNotification(_ userInfo: [AnyHashable : Any]?, withCompletion completion: ((_ message: Message?, _ error: Error?) -> Void)? = nil)` 
+
+*REMOVED*
+
+* `static func didReceiveNotification(_ userInfo: [AnyHashable : Any]?, withCompletion completion: ((_ message: Message?, _ error: Error?) -> Void)? = nil)`
 
 #### Upgrade Steps
 
-1. Update your applicable Xcode project settings to a minimum iOS deployment target of 13.0 or greater.
+1. Update your applicable Xcode project settings to a minimum iOS deployment target of 12.0 or greater.
 
-2. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.10.x'`, update your iOS platform to 13.0 or greater, then run `pod update` in the Terminal to update the framework.
+2. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.10.x'`, update your iOS platform to 12.0 or greater, then run `pod update` in the Terminal to update the framework.
+
+3. Update the following calls in your `appDelegate`:
+    - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.didReceiveRemoteNotification` in `application:didReceiveRemoteNotification`
+    - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.willPresent` in `userNotificationCenter:willPesent`
+    - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.didReceive` in `userNotificationCenter:didReceive`
 
 ## Upgrade from 3.8.x to 3.9.x
 
@@ -23,10 +41,10 @@ This release adds API for Message Center Service.
 
 *ADDED*
 
-*`static func fetchMessages(startDate: Date, endDate: Date, completion: @escaping (_ messages: [Message]?, _ error: Error?) -> Void)`
-*`static func markMessageAsRead(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)` 
-*`static func markMessageAsUnread(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
-*`static func postMessageEvent(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
+* `static func fetchMessages(startDate: Date, endDate: Date, completion: @escaping (_ messages: [Message]?, _ error: Error?) -> Void)`
+* `static func markMessageAsRead(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)` 
+* `static func markMessageAsUnread(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
+* `static func postMessageEvent(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
 
 #### Upgrade Steps
 

@@ -1,8 +1,9 @@
 # PWEngagement Changelog
-## 3.10.0 (Wednesday, July 28, 2021)
+## 3.10.0 (TBD)
 #### Features
 * Updated to PWCore 3.11.0
-* iOS deployment target increased from 10.0 to 13.0
+* iOS deployment target increased from 10.0 to 12.0
+* Renamed and added API methods used to inform PWEngagement SDK that a notification has arrived.
 
 ## 3.9.0 (Monday, March 15, 2021)
 #### Features
