@@ -1,0 +1,11 @@
+framework module PWEngagement {
+  umbrella header "PWEngagement.h"
+
+  export *
+  module * { export * }
+}
+
+module PWEngagement.Swift {
+    header "PWEngagement-Swift.h"
+    requires objc
+}
