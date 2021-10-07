@@ -1,6 +1,0 @@
-framework module MistBeaconProvider {
-  umbrella header "MistBeaconProvider.h"
-
-  export *
-  module * { export * }
-}
