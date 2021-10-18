@@ -1,40 +1,58 @@
-Pod::Spec.new do |s|
-  s.name         = "PWEngagement"
-  s.version      = "3.9.1"
-  s.summary      = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
-  s.homepage     = "http://phunware.github.io/maas-engagement-ios-sdk/"
-  s.author       = { 'Phunware, Inc.' => 'http://www.phunware.com' }
-  s.social_media_url = 'https://twitter.com/Phunware'
+Pod::Spec.new do |spec|
+  spec.name = 'PWEngagement'
+  spec.version = '3.10.1'
+  spec.license = { :type => 'Copyright', :text => 'Copyright 2009-present Phunware Inc. All rights reserved.' }
+  spec.summary = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
+  spec.homepage = 'https://github.com/phunware/maas-engagement-ios-sdk/'
+  spec.author = { 'Phunware, Inc.' => 'https://www.phunware.com' }
+  spec.social_media_url = 'https://twitter.com/phunware'
+  
+  spec.platform = :ios, '13.0'
+  spec.source = { :git => "https://github.com/phunware/maas-engagement-ios-sdk.git", :tag => "v#{spec.version}" }
+  spec.documentation_url = 'https://phunware.github.io/maas-engagement-ios-sdk/'
 
-  s.platform     = :ios, '10.0'
-  s.source       = { :git => "https://github.com/phunware/maas-engagement-ios-sdk.git", :tag => "v#{s.version}" }
-  s.license      = { :type => 'Copyright', :text => 'Copyright 2009-present Phunware Inc. All rights reserved.' }
+  spec.default_subspecs =
+    'Core',
+    'DeviceIdentity'
 
-  s.ios.vendored_frameworks = 'Frameworks/PWEngagement.xcframework'
+  spec.subspec 'Core' do |subspec|
+    subspec.dependency 'PWCore', '~> 3.11.0'
+    subspec.dependency 'FMDB/SQLCipher', '~> 2.7.0'
 
-  s.ios.dependency 'FMDB'
-        
-  s.default_subspec = 'all-frameworks'
+    subspec.vendored_frameworks = 'Frameworks/PWEngagement.xcframework'
+    
+    subspec.frameworks = 'CoreLocation'
 
-  s.subspec 'all-frameworks' do |sub|
-    sub.dependency 'PWCore', '~> 3.10.0'
-    sub.dependency 'PWCore/DeviceIdentity', '~> 3.10.0'
+    subspec.libraries =
+      'sqlite3',
+      'z'
   end
   
-  s.subspec 'LimitedDeviceIdentity' do |sub|
-    sub.ios.vendored_frameworks = 'Frameworks/PWEngagement.xcframework'
-    sub.dependency 'PWCore', '~> 3.10.0'
+  spec.subspec 'DeviceIdentity' do |subspec|
+    subspec.dependency 'PWEngagement/Core'
+    subspec.dependency 'PWCore/DeviceIdentity', '~> 3.11.0'
+  end
+  
+  spec.subspec 'LimitedDeviceIdentity' do |subspec|
+    subspec.dependency 'PWEngagement/Core'
   end
 
-  s.subspec 'MistBeaconProvider' do |sub|
-    sub.ios.vendored_frameworks = 'Frameworks/MistBeaconProvider.xcframework'
-    sub.dependency 'MistSDKDR', '1.5.272'
-    sub.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-    sub.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-  end
-                
-  s.library = 'sqlite3', 'z'
-  s.ios.frameworks = 'CoreLocation'
-  s.requires_arc  = true
+  spec.subspec 'MistBeaconProviderCore' do |subspec|
+    subspec.dependency 'PWEngagement/Core'
+    subspec.dependency 'MistSDKDR', '1.5.280'
 
+    subspec.vendored_frameworks = 'Frameworks/MistBeaconProvider.xcframework'
+    
+    subspec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    subspec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  end
+
+  spec.subspec 'MistBeaconProvider' do |subspec|
+    subspec.dependency 'PWEngagement/MistBeaconProviderCore'
+    subspec.dependency 'PWEngagement/DeviceIdentity'
+  end
+  
+  spec.subspec 'MistBeaconProviderWithLimitedDeviceIdentity' do |subspec|
+    subspec.dependency 'PWEngagement/MistBeaconProviderCore'
+  end
 end
