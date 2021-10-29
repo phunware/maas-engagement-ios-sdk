@@ -219,20 +219,6 @@ extern NSString *const PWMEMonitoredGeoZoneChangesNotificationKey;
  */
 + (void)setStaticIdentifier:(NSString *)staticIdentifier completion:(void(^)(NSError * _Nullable error))completion;
 
-/**
- * Starts the mobile engagement service with environment.
- * @remarks This method has been deprecated.
- * @param maasAppId You can find your Application ID in the MaaS portal.
- * @param accessKey A unique key that identifies the client making the request. You can find your Access Key in the MaaS portal.
- * @param encryptionKey The key used to encrypt and decrypt data that is exchanged between the client and the server. You can find your Encryption Key in the MaaS portal.
- * @param completion A block that notify mobile engagement service is successfully started or failed to start with reason.
- *      - *param1* error It's nil when it's started successfully, or an error object containing information about a problem that indicates mobile engagement service failed to start.
- */
-+ (void)startWithMaasAppId:(NSString *)maasAppId
-				 accessKey:(NSString *)accessKey
-			 encryptionKey:(NSString *)encryptionKey
-				completion:(void(^)(NSError * _Nullable error))completion __deprecated;
-
 @end
 
 NS_ASSUME_NONNULL_END

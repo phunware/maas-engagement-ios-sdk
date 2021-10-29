@@ -1,9 +1,18 @@
 # PWEngagement Changelog
-## 3.10.0 (TBD)
+## 3.10.1 (Monday, October 18, 2021)
+#### Bug fixes
+* Fixed beacon campaign detection crash
+* Added missing metaData for local campaign notification
+
+## 3.10.0 (Wednesday, July 28, 2021)
 #### Features
 * Updated to PWCore 3.11.0
-* iOS deployment target increased from 10.0 to 12.0
-* Renamed and added API methods used to inform PWEngagement SDK that a notification has arrived.
+* iOS deployment target increased from 10.0 to 13.0
+
+## 3.9.1 (Thursday, October 7, 2021)
+#### Bug fixes
+* Fixed beacon campaign detection crash
+* Added missing metaData for local campaign notification
 
 ## 3.9.0 (Monday, March 15, 2021)
 #### Features

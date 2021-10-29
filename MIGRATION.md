@@ -4,7 +4,7 @@
 
 #### General
 
-The iOS deployment target of PWEngagement is now 12.0 instead of 10.0. To be compatible with PWEngagement, an application must have a minimum iOS deployment target of 12.0 as well.
+The iOS deployment target of PWEngagement is now 13.0 instead of 10.0. To be compatible with PWEngagement, an application must have a minimum iOS deployment target of 13.0 as well.
 
 #### PWEngagement
 
@@ -20,9 +20,9 @@ The iOS deployment target of PWEngagement is now 12.0 instead of 10.0. To be com
 
 #### Upgrade Steps
 
-1. Update your applicable Xcode project settings to a minimum iOS deployment target of 12.0 or greater.
+1. Update your applicable Xcode project settings to a minimum iOS deployment target of 13.0 or greater.
 
-2. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.10.x'`, update your iOS platform to 12.0 or greater, then run `pod update` in the Terminal to update the framework.
+2. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.10.x'`, update your iOS platform to 13.0 or greater, then run `pod update` in the Terminal to update the framework.
 
 3. Update the following calls in your `appDelegate`:
     - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.didReceiveRemoteNotification` in `application:didReceiveRemoteNotification`
