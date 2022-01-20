@@ -6,7 +6,6 @@ import PWCore
 @_exported import PWEngagement
 import Swift
 @objc @_inheritsConvenienceInitializers @objcMembers final public class PushNotificationTracker : ObjectiveC.NSObject {
-  @objc public static func didFinishLaunchingWithOptions(_ launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
   @objc public static func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any])
   @objc public static func willPresent(_ notification: UserNotifications.UNNotification)
   @objc public static func didReceive(_ response: UserNotifications.UNNotificationResponse)

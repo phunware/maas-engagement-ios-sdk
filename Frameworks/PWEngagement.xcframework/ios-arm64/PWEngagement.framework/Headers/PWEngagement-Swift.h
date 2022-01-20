@@ -190,7 +190,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
-@import UIKit;
 #endif
 
 #import <PWEngagement/PWEngagement.h>
@@ -241,7 +240,6 @@ SWIFT_CLASS("_TtC12PWEngagement7Message")
 
 SWIFT_CLASS("_TtC12PWEngagement23PushNotificationTracker")
 @interface PushNotificationTracker : NSObject
-+ (void)didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 + (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
 + (void)willPresent:(UNNotification * _Nonnull)notification;
 + (void)didReceive:(UNNotificationResponse * _Nonnull)response;
