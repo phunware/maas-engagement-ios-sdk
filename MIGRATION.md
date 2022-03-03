@@ -1,10 +1,10 @@
 # PWEngagement Migration Guide
 
-## Upgrade from 3.9.x to 3.10.x
+## Upgrade from 3.10.x to 3.11.x
 
 #### General
 
-The iOS deployment target of PWEngagement is now 13.0 instead of 10.0. To be compatible with PWEngagement, an application must have a minimum iOS deployment target of 13.0 as well.
+This release reworks the existing push notifications integration flow, so that it is easy and explicit for SDK adopters to configure within their own apps.
 
 #### PWEngagement
 
@@ -20,14 +20,24 @@ The iOS deployment target of PWEngagement is now 13.0 instead of 10.0. To be com
 
 #### Upgrade Steps
 
-1. Update your applicable Xcode project settings to a minimum iOS deployment target of 13.0 or greater.
+1. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.11.x'`,  then run `pod update` in the Terminal to update the framework.
 
-2. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.10.x'`, update your iOS platform to 13.0 or greater, then run `pod update` in the Terminal to update the framework.
-
-3. Update the following calls in your `appDelegate`:
+2. Update the following calls in your `appDelegate`:
     - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.didReceiveRemoteNotification` in `application:didReceiveRemoteNotification`
     - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.willPresent` in `userNotificationCenter:willPesent`
     - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.didReceive` in `userNotificationCenter:didReceive`
+
+## Upgrade from 3.9.x to 3.10.x
+
+#### General
+
+The iOS deployment target of PWEngagement is now 13.0 instead of 10.0. To be compatible with PWEngagement, an application must have a minimum iOS deployment target of 13.0 as well.
+
+#### Upgrade Steps
+
+1. Update your applicable Xcode project settings to a minimum iOS deployment target of 13.0 or greater.
+
+2. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.10.x'`, update your iOS platform to 13.0 or greater, then run `pod update` in the Terminal to update the framework.
 
 ## Upgrade from 3.8.x to 3.9.x
 

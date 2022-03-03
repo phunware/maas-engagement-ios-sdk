@@ -55,7 +55,6 @@ Steps to run the sample app
 
  * `MaaSAppId`: The application ID from MaaS Portal.
  * `MaaSAccessKey`: The access key from MaaS Portal.
- * `MaaSSignatureKey`: The signature key from MaaS Portal.
 
 4. Configure your app for push notifications.
    * Go to [developer.apple.com](http://developer.apple.com) and create a push notification certificate ([tutorial link](https://www.raywenderlich.com/123862/push-notifications-tutorial)).
