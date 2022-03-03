@@ -1,30 +1,29 @@
 PWEngagement SDK for iOS
 ==================
+[![Version](https://img.shields.io/cocoapods/v/PWEngagement.svg?style=flat-square)](https://cocoapods.org/pods/PWEngagement) [![License](https://img.shields.io/cocoapods/l/PWEngagement.svg?style=flat-square)](https://cocoapods.org/pods/PWEngagement) [![Platforms](https://img.shields.io/cocoapods/p/PWEngagement?style=flat-square)](https://cocoapods.org/pods/PWEngagement) [![Twitter](https://img.shields.io/badge/twitter-@phunware-blue.svg?style=flat-square)](https://twitter.com/phunware)
 
->Version 3.10.1
-
-This is Phunware's iOS SDK for Mobile Engagement, a location and notification-based system. Visit https://maas.phunware.com/ for more details and to sign up.
+This is Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform. It provides location and notification-based capabilities. Visit https://maas.phunware.com for more details and to sign up.
 
 Requirements
 ------------
-
 - PWCore 3.11.x
 - iOS 13.0 or greater
 - Xcode 12 or greater
 
 Installation
 ------------
-Phunware recommends using [CocoaPods](http://www.cocoapods.org) 1.10 or greater to integrate the framework. Simply add
+### CocoaPods
+It is required to use [CocoaPods](http://www.cocoapods.org) 1.10 or greater to integrate the framework. Simply add the following to your Podfile:
 
-`pod 'PWEngagement'`
+````ruby
+pod 'PWEngagement'
+````
 
-to your podfile, which would automatically resolve the required dependency and `PWCore`.
+To enable support for Mist virtual beacons, add the `MistBeaconProvider` subspec:
 
-## Beacon Provider Subspecs
-The below supported third party beacon providers are disabled by default. To enable them, add their respective subspec to your `Podfile`.
-
-### Mist
-`pod PWEngagement/MistBeaconProvider`
+````ruby
+pod 'PWEngagement/MistBeaconProvider'
+````
 
 Documentation
 ------------
@@ -56,7 +55,6 @@ Steps to run the sample app
 
  * `MaaSAppId`: The application ID from MaaS Portal.
  * `MaaSAccessKey`: The access key from MaaS Portal.
- * `MaaSSignatureKey`: The signature key from MaaS Portal.
 
 4. Configure your app for push notifications.
    * Go to [developer.apple.com](http://developer.apple.com) and create a push notification certificate ([tutorial link](https://www.raywenderlich.com/123862/push-notifications-tutorial)).
@@ -68,14 +66,13 @@ Steps to run the sample app
      * Password: The password you setup for the push certificate.
      * Environment: Use Production environment for production apps.  
 
-
 Attribution
 ------------
-PWEngagement uses the following third-party components.
+PWEngagement uses the following third-party dependencies:
 
 | Component | Description | License |
 |:---------:|:-----------:|:-------:|
-|[FMDB](https://github.com/ccgus/fmdb/)|This is an Objective-C wrapper around SQLite: http://sqlite.org/.|[MIT](https://github.com/ccgus/fmdb/blob/master/LICENSE.txt)|
+|[FMDB](https://github.com/ccgus/fmdb/)|This is an Objective-C wrapper around SQLite: http://sqlite.org.|[MIT](https://github.com/ccgus/fmdb/blob/master/LICENSE.txt)|
 
 Privacy
 -----------
@@ -83,4 +80,5 @@ You understand and consent to Phunware’s Privacy Policy located at www.phunwar
 
 Terms
 -----------
-Use of this software requires review and acceptance of our terms and conditions for developer use located at http://www.phunware.com/terms/
+Use of this software requires review and acceptance of our terms and conditions for developer use located at http://www.phunware.com/terms
+

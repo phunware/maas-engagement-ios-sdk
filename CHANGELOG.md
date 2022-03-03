@@ -1,4 +1,16 @@
 # PWEngagement Changelog
+## 3.11.0 (Thursday, March 05, 2022)
+#### Features
+* Reworked the existing push notifications integration flow, so that it is easy and explicit for SDK adopters to configure within their own apps.  Please see migration guide for details.
+* Renamed analytics from `MESSAGE_RECEIVED` to `NOTIFICATION_RECEIVED` and `MESSAGE_VIEWED` to `NOTIFICATION_CLICKED`
+#### Bug fixes
+* Fixed issues with cancelling last monitored campaigns for a region
+* Fixed issues with updating monitored campaigns
+
+## 3.10.2 (Friday, October 29, 2021)
+#### Features
+* Updated to PWCore 3.12.0
+
 ## 3.10.1 (Monday, October 18, 2021)
 #### Bug fixes
 * Fixed beacon campaign detection crash

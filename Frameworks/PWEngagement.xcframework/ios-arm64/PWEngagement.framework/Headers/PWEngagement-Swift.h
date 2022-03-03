@@ -235,6 +235,17 @@ SWIFT_CLASS("_TtC12PWEngagement7Message")
 @end
 
 
+@class UNNotification;
+@class UNNotificationResponse;
+
+SWIFT_CLASS("_TtC12PWEngagement23PushNotificationTracker")
+@interface PushNotificationTracker : NSObject
++ (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
++ (void)willPresent:(UNNotification * _Nonnull)notification;
++ (void)didReceive:(UNNotificationResponse * _Nonnull)response;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif

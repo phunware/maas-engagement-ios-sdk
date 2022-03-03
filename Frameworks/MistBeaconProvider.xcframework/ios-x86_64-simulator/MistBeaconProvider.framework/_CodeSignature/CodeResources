@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MistBeaconProvider.h</key>
 		<data>
-		NNKZarloeDGyZ8K0DXBk1BDd1eo=
+		Tt0o/zVy+ehNwcg0/p9Cw5j+kCE=
 		</data>
 		<key>Headers/PWMistBeaconManager+Provider.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		a14KB0gPJZSPWtPBDo17br1FAbM=
+		R0Vvg9BrOwh3pdsnVK+rkN0wXpI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -27,7 +27,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			17P70ndH00nTL0so3OLW91QbvkE8yC/CiuAuVW3e2WY=
+			RD8DTV7+AsrvRpZUiZJdG8P958b8TtjyCmMoT7WqZkI=
 			</data>
 		</dict>
 		<key>Headers/PWMistBeaconManager+Provider.h</key>

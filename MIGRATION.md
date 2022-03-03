@@ -1,4 +1,32 @@
 # PWEngagement Migration Guide
+
+## Upgrade from 3.10.x to 3.11.x
+
+#### General
+
+This release reworks the existing push notifications integration flow, so that it is easy and explicit for SDK adopters to configure within their own apps.
+
+#### PWEngagement
+
+*ADDED*
+
+* `static func willPresent(_ notification: UNNotification?, withCompletion completion: @escaping (Message?, Error?) -> Void)`
+* `static func didReceive(_ response: UNNotificationResponse?, withCompletion completion: @escaping (Message?, Error?) -> Void)`
+* `static func didReceiveRemoteNotification(_ userInfo: [AnyHashable : Any]?, withCompletion completion: ((_ message: Message?, _ error: Error?) -> Void)? = nil)` 
+
+*REMOVED*
+
+* `static func didReceiveNotification(_ userInfo: [AnyHashable : Any]?, withCompletion completion: ((_ message: Message?, _ error: Error?) -> Void)? = nil)`
+
+#### Upgrade Steps
+
+1. Open the `Podfile` from your project and change PWEngagement to include `pod 'PWEngagement', '3.11.x'`,  then run `pod update` in the Terminal to update the framework.
+
+2. Update the following calls in your `appDelegate`:
+    - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.didReceiveRemoteNotification` in `application:didReceiveRemoteNotification`
+    - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.willPresent` in `userNotificationCenter:willPesent`
+    - Replace call `PWEngagement.didReceiveNotification` with `PWEngagement.didReceive` in `userNotificationCenter:didReceive`
+
 ## Upgrade from 3.9.x to 3.10.x
 
 #### General
@@ -23,10 +51,10 @@ This release adds API for Message Center Service.
 
 *ADDED*
 
-*`static func fetchMessages(startDate: Date, endDate: Date, completion: @escaping (_ messages: [Message]?, _ error: Error?) -> Void)`
-*`static func markMessageAsRead(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)` 
-*`static func markMessageAsUnread(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
-*`static func postMessageEvent(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
+* `static func fetchMessages(startDate: Date, endDate: Date, completion: @escaping (_ messages: [Message]?, _ error: Error?) -> Void)`
+* `static func markMessageAsRead(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)` 
+* `static func markMessageAsUnread(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
+* `static func postMessageEvent(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)`
 
 #### Upgrade Steps
 
