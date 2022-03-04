@@ -11,47 +11,94 @@ import UIKit
 import UserNotifications
 import PWEngagement
 
+/*
+ The "DeviceIdentity" module is a subspec from the Core SDK.
+ It only resolves (and is needed) when using SDK binaries.
+ */
+#if canImport(DeviceIdentity)
+    import DeviceIdentity
+#endif
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    // Enter your application identifier, access key, and signature key, found on Maas portal under Account > Apps
-    let applicationId = ""
-    let accessKey = ""
-    let signatureKey = ""
+    // Enter your application identifier and access key, found on Maas portal under Account > Apps
+    private let applicationId = ""
+    private let accessKey = ""
+    private var isApplicationFinishedLaunching = false
+    private let locationManager = CLLocationManager()
+    private var locationAuthorizationStatusCompletion: (() -> Void)?
+    private var lastDeviceToken: Data?
+    private var launchOptions:  [UIApplication.LaunchOptionsKey: Any]?
+    private var hasAppBecomeActiveThisSession = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        PWLogger.fileLoggingEnabled(true, forService: PWEngagement.serviceName())
-        PWLogger.setLoggersLogLevel(.debug)
-        
-        PWEngagement.start(withMaasAppId: applicationId, accessKey: accessKey, signatureKey: signatureKey) { (error) in
-            if let error = error {
-                print("Error starting Engagement: \(error.localizedDescription)")
-            }
-        }
-        UIApplication.shared.unregisterForRemoteNotifications()
-        UIApplication.shared.registerForRemoteNotifications()
-        
-        // Request authorization
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-            guard granted else {
-                return
-            }
-            
-            UNUserNotificationCenter.current().getNotificationSettings(completionHandler: { (settings) in
-                if settings.authorizationStatus != .authorized {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
-            })
-        }
         UNUserNotificationCenter.current().delegate = self
         
-        PWEngagement.didFinishLaunching(options: launchOptions) { (_) -> Bool in return true }
+        self.launchOptions = launchOptions
+                        
         return true
     }
     
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // With iOS 15.0+, Apple requires that App Tracking Authorization request to be made while app is in active state.
+        // So we move all our engagment startup code here.
+        guard !self.hasAppBecomeActiveThisSession else {
+            return
+        }
+        self.hasAppBecomeActiveThisSession = true
+        
+        requestAppTrackingPermission { [weak self] in
+            guard let self = self else {
+                return
+            }
+            
+            self.requestLocationPermisson { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                
+                self.requestNotificationsPermission { [weak self] (isAuthorized) in
+                    guard let self = self else {
+                        return
+                    }
+                                        
+                    // Ensure previously cached analytics are sent to the correct MaaS sever environment
+                    PWLogger.fileLoggingEnabled(true, forService: PWEngagement.serviceName())
+                    PWLogger.setLoggersLogLevel(.debug)
+                    PWEngagement.setLocalNotificationHandler {notification in
+                        let hideNotificationIdentifier = "HIDE_NOTIFICATION"
+                        return !(notification.message.alertTitle ?? "").contains(hideNotificationIdentifier)
+                    }
+                    PWEngagement.didFinishLaunching(options: self.launchOptions) { [weak self] (_) -> Bool in
+                        DispatchQueue.executeOnMain {
+                            guard let self = self else {
+                                return
+                            }
+                            
+                            guard !self.isApplicationFinishedLaunching else {
+                                return
+                            }
+                            
+                            PWEngagement.start(withMaasAppId: self.applicationId, accessKey: self.accessKey) { (error) in
+                                if let error = error {
+                                    print("Error starting Engagement: \(error.localizedDescription)")
+                                }
+                            }
+
+                            self.isApplicationFinishedLaunching = true
+                        }
+                        
+                        return true
+                    }
+                }
+            }
+        }
+    }
+
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         PWEngagement.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
     }
@@ -61,7 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        PWEngagement.didReceiveNotification(userInfo) { (_, _) in
+        PWEngagement.didReceiveRemoteNotification(userInfo) { (_, _) in
             completionHandler(.newData)
         }
     }
@@ -70,7 +117,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        PWEngagement.didReceiveNotification(notification.request.content.userInfo) { [weak self] (message, error) in
+        PWEngagement.willPresent(notification) { [weak self] (message, _) in
             if let message = message {
                 let alertVC = UIAlertController(title: message.alertTitle, message: message.alertBody, preferredStyle: .alert)
                 let viewAction = UIAlertAction(title: NSLocalizedString("View", comment: ""), style: .default) { (_) in
@@ -90,7 +137,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        PWEngagement.didReceiveNotification(response.notification.request.content.userInfo) { [weak self] (message, error) in
+        PWEngagement.didReceive(response) { [weak self] (message, _) in
             if let message = message {
                 self?.deeplink(message: message)
             }
@@ -110,6 +157,105 @@ extension AppDelegate {
                 messagesViewController.selectedMessage = message
                 messagesViewController.performSegue(withIdentifier: String(describing: MessageDetailViewController.self), sender: nil)
             }
+        }
+    }
+}
+
+// MARK: - App Launch
+private extension AppDelegate {
+        
+    func requestLocationPermisson(completion: @escaping () -> Void) {
+        // Supposedly, we shouldn't need to check authorization status before calling request authorization,
+        // But the didChangeAuthorization delegate doesn't always get called after user have selected
+        // a permission option.
+        if authorizationStatus(locationManager) == .notDetermined {
+            locationAuthorizationStatusCompletion = completion
+            locationManager.requestAlwaysAuthorization()
+            locationManager.delegate = self
+        } else {
+            DispatchQueue.executeOnMain(completion)
+        }
+    }
+    
+    func requestAppTrackingPermission(completion: @escaping () -> Void) {
+        let mainThreadCompletion = {
+            DispatchQueue.executeOnMain(completion)
+        }
+        
+        guard #available(iOS 14.0, *) else {
+            mainThreadCompletion()
+            return
+        }
+        
+        switch PWCore.isAdvertisingIdentifierPermissionRequestable {
+        case .allowed:
+            PWCore.requestAdvertisingIdentifierPermission { _ in
+                // We got permission to track
+                mainThreadCompletion()
+            } failure: { error in
+                // Permission was denied
+                print("Error requesting advertising identifier permission:", error)
+                mainThreadCompletion()
+            }
+        case .notAllowed,
+             .alreadyAuthorized:
+            fallthrough
+        @unknown default:
+            mainThreadCompletion()
+        }
+    }
+    
+    func requestNotificationsPermission(completion: @escaping (_ isAuthorized: Bool) -> Void) {
+        let mainThreadCompletion: (_ isAuthorized: Bool) -> () = { isAuthorized in
+            DispatchQueue.executeOnMain {
+                completion(isAuthorized)
+            }
+        }
+        let userNotificationCenter = UNUserNotificationCenter.current()
+        
+        userNotificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            guard error == nil else {
+                print("An unexpected error occurred while requesting authorization for notifications: \(String(describing: error?.localizedDescription))")
+                mainThreadCompletion(false)
+                return
+            }
+            
+            mainThreadCompletion(granted)
+        }
+    }
+}
+
+extension AppDelegate : CLLocationManagerDelegate {
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        guard manager === locationManager else {
+            fatalError("AppDelegate does not support being the delegate of CLLocationManager objects other than its own private location manager.")
+        }
+        
+        guard authorizationStatus(manager) != .notDetermined else {
+            return
+        }
+        
+        guard let locationAuthorizationStatusCompletion = locationAuthorizationStatusCompletion else {
+            fatalError("AppDelegate.locationAuthorizationStatusCompletion must be set before location authorization changes")
+        }
+        
+        DispatchQueue.executeOnMain(locationAuthorizationStatusCompletion)
+        
+        manager.delegate = nil
+        self.locationAuthorizationStatusCompletion = nil
+    }
+    
+    // Provide support for iOS 13.x and less
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        locationManagerDidChangeAuthorization(manager)
+    }
+    
+    private func authorizationStatus(_ manager: CLLocationManager) -> CLAuthorizationStatus {
+        if #available(iOS 14.0, *) {
+            return manager.authorizationStatus
+        } else {
+            return CLLocationManager.authorizationStatus()
         }
     }
 }

@@ -17,11 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Enter your application identifier, access key, and signature key, found on Maas portal under Account > Apps
     let applicationId = ""
     let accessKey = ""
-    let signatureKey = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        PWEngagement.start(withMaasAppId: applicationId, accessKey: accessKey, signatureKey: signatureKey, completion: nil)
+        PWEngagement.start(withMaasAppId: applicationId, accessKey: accessKey, completion: { <#Error?#> in
+            <#code#>
+        }
         PWEngagement.didFinishLaunching(options: launchOptions) { notification -> Bool in
             return true
         }

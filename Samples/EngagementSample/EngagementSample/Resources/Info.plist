@@ -28,6 +28,8 @@
 	<string>Please allow location for Engagement use</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please allow location for Engagement use</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>This allows Phunware to provide you with a better app experience.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>

@@ -4,5 +4,5 @@ platform :ios, '13.0'
 use_frameworks!
 
 target 'EngagementScenarios' do
-  pod 'PWEngagement', '~> 3.10.0'
+  pod 'PWEngagement', '~> 3.11.0'
 end

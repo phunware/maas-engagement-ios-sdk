@@ -41,8 +41,11 @@ class MapViewController: UIViewController {
         DispatchQueue.main.async {
             self.mapView.removeOverlays(self.mapView.overlays)
             
+            guard let geozones = PWEngagement.geozones() else {
+                return
+            }
             var overlaysToAdd = [MKOverlay]()
-            for geozone in PWEngagement.geozones() {
+            for geozone in geozones {
                 let geozoneCircle = GeozoneCircle(center: geozone.region.center, radius: geozone.region.radius)
                 geozoneCircle.title = geozone.name
                 if geozone.inside {
