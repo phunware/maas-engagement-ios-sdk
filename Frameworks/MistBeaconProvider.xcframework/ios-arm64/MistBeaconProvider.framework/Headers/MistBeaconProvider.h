@@ -13,4 +13,4 @@
 #import "PWMistBeaconManager+Provider.h"
 #endif
 
-static NSString * const MistBeaconProviderVersion = @"3.11.0";
+static NSString * const MistBeaconProviderVersion = @"3.11.1";
