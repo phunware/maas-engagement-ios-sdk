@@ -1,4 +1,8 @@
 # PWEngagement Changelog
+## 3.11.1 (Tuesday, May 24, 2022)
+#### Bugfixes
+* Fixed issues of not sending GEOFENCE_EXIT event when we move outside of a geofence while the app is in the background.
+
 ## 3.11.0 (Thursday, March 05, 2022)
 #### Features
 * Reworked the existing push notifications integration flow, so that it is easy and explicit for SDK adopters to configure within their own apps.  Please see migration guide for details.
