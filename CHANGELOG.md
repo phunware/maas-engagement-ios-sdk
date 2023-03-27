@@ -1,152 +1,256 @@
-# PWEngagement Changelog
-## 3.11.1 (Tuesday, May 24, 2022)
-#### Bugfixes
-* Fixed issues of not sending GEOFENCE_EXIT event when we move outside of a geofence while the app is in the background.
+# Changelog
 
-## 3.11.0 (Thursday, March 05, 2022)
-#### Features
-* Reworked the existing push notifications integration flow, so that it is easy and explicit for SDK adopters to configure within their own apps.  Please see migration guide for details.
-* Renamed analytics from `MESSAGE_RECEIVED` to `NOTIFICATION_RECEIVED` and `MESSAGE_VIEWED` to `NOTIFICATION_CLICKED`
-#### Bug fixes
-* Fixed issues with cancelling last monitored campaigns for a region
-* Fixed issues with updating monitored campaigns
+All notable changes to this project will be documented in this file.
 
-## 3.10.2 (Friday, October 29, 2021)
-#### Features
-* Updated to PWCore 3.12.0
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 3.10.1 (Monday, October 18, 2021)
-#### Bug fixes
-* Fixed beacon campaign detection crash
-* Added missing metaData for local campaign notification
+## [3.12.0][] - TBD
 
-## 3.10.0 (Wednesday, July 28, 2021)
-#### Features
-* Updated to PWCore 3.11.0
-* iOS deployment target increased from 10.0 to 13.0
+### Removed
 
-## 3.9.1 (Thursday, October 7, 2021)
-#### Bug fixes
-* Fixed beacon campaign detection crash
-* Added missing metaData for local campaign notification
+-  Removed support for Mist vBLE
 
-## 3.9.0 (Monday, March 15, 2021)
-#### Features
-* Added Message Center Service
+## [3.11.1][] - 2022-05-24
 
-## 3.8.1 (Thursday, November 5, 2020)
-#### Bug fixes / performance enhancements
-* Migrated Mist beacon provider into its own framework
-* Built and archived SDK with Xcode 12.
+### Fixed
 
-## 3.8.0 (Thursday, September 3rd, 2020)
-#### Features
-* Migrated to use XCFrameworks
+- Fixed issues of not sending GEOFENCE_EXIT event when we move outside of a geofence while the app is in the background.
 
-## 3.7.5 (Thursday, April 2nd, 2020)
-#### Bug fixes / performance enhacements
-* Update Mist location provider to support iOS 13+
-* Fix an issue where a deadlock would occur when tracking analytics for a received push notification
+## [3.11.0][] - 2022-03-05
 
-## 3.7.4 (Tuesday, October 1st, 2019)
-#### Bug fixes / performance enhancements
-* Reformat device token string for iOS 13
-* Add CoreNoAds subspec
+### Features
 
-## 3.7.3 (Wednesday, March 13th, 2019)
-#### Bug fixes / performance enhancements
-* Improve consistency of beacon notifications received from killed app state
+- Reworked the existing push notifications integration flow, so that it is easy and explicit for SDK adopters to configure within their own apps.  Please see migration guide for details.
+- Renamed analytics from `MESSAGE_RECEIVED` to `NOTIFICATION_RECEIVED` and `MESSAGE_VIEWED` to `NOTIFICATION_CLICKED`
 
-## 3.7.2 (Thursday, January 10th, 2019)
-#### Bug fixes / performance enhancements
-* Update to MistSDK 1.4.2
+### Fixed
 
-## 3.7.1 (Thursday, November 29th, 2018)
-#### Bug fixes / performance enhancements
-* Update to MistSDK 1.3.0
+- Fixed issues with cancelling last monitored campaigns for a region
+- Fixed issues with updating monitored campaigns
 
-## 3.7.0 (Wednesday, November 14th, 2018)
-#### Features
-* Update for PWCore 3.8.x compatibility using new automatic screen view analytic events and simplified custom event creation.
+## [3.10.2][] - 2021-10-29
 
-## 3.6.1 (Tuesday, Oct 16th, 2018)
-#### Features
-* Add metadata parsing for on demand broadcasts
+### Changed
 
-#### Bug fixes / performance enhancements
-* Fix incorrect campaign type for different broadcasts
-* Improve load time for broadcast with promotion data
-* Fix crash when opening broadcast from a inactive state
+- Updated to PWCore 3.12.0
 
-## 3.6.0 (Thursday, Sep 20th, 2018)
-#### Features
-* Add When-In-Use location permission support
+## [3.10.1][] - 2021-10-18
 
-#### Bug fixes / performance enhancements
-* Capability to unset all profile attributes by passing a nil dictionary
+### Fixed
 
-## 3.5.1 (Monday, Aug 27th, 2018)
-#### Bug fixes / performance enhancements
-* Fix crash on iOS 12
+- Fixed beacon campaign detection crash
+- Added missing metaData for local campaign notification
 
-## 3.5.0 (Monday, Aug 13th, 2018)
-#### Bug fixes / performance enhancements
-* iOS deployment target increased from 9.0 to 10.0
-* Fix device update token call
+## [3.10.0][] - 2021-07-28
 
-## 3.4.3 (Thursday, June 14th, 2018)
-#### Bug fixes / performance enhancements
-* Fixed crash when opening broadcast from an inactive state
+### Changed
 
-## 3.4.2 (Thursday, May 31st, 2018)
-#### Features
-* Update to PWCore 3.6.x
+- Updated to PWCore 3.11.0
 
-#### Bug fixes / performance enhancements
-* Fixed OS timing issue on first app launch geofence entry
+### Added
 
-## 3.4.1 (Monday, May 21st, 2018)
-#### Bug fixes / performance enhancements
-* Fixed first app launch missed notifications
+- iOS deployment target increased from 10.0 to 13.0
 
-## 3.4.0 (Monday, May 7th, 2018)
-#### Features
-* Removed location and push notification permission prompting
-* Update to PWCore 3.5.x
+## [3.9.1][] - 2021-10-07
 
-## 3.3.2 (Monday, Apr 16th, 2018)
-#### Features
-* Update to PWCore 3.4.x
+### Fixed
 
-#### Bug fixes / performance enhancements
-* Fixed crash when background location updates aren't enabled
+- Fixed beacon campaign detection crash
+- Added missing metaData for local campaign notification
 
-## 3.3.1 (Wednesday, Mar 28th, 2018)
-#### Bug fixes / performance enhancements
-* Location is no longer required to download promotion data
-* Added notification when a user selects When-In-Use only permission
+## [3.9.0][] - 2021-03-15
 
-## 3.3.0 (Thursday, Feb 22nd, 2018)
-#### Features
-* Update to PWCore 3.3.x
+### Added
 
-#### Bug fixes / performance enhancements
-* Fixed crash when starting vBLE.
+- Added Message Center Service
 
-## 3.2.0 (Monday, Dec 18th, 2017)
-* vBLE Beacon Ranging
+## [3.8.1][] - 2020-11-05
 
-## 3.1.3 (Thursday, Oct 19th, 2017)
-* Update PWCore to 3.1.3
+### Changed
 
-## 3.1.2 (Monday, Oct 16th, 2017)
-* Update the framework to dynamic.
-* Use latest logger functionality from PWCore.
-* Internal Fixes.
+- Migrated Mist beacon provider into its own framework
+- Built and archived SDK with Xcode 12.
 
-## 3.1.1 (Monday, Aug 14th, 2017)
-* Fix issue with title for broadcast campaigns.
-* Performance improvements and fixes.
+## [3.8.0][] - 2020-09-03
 
-## 3.1.0 (Thursday, May 11th, 2017)
-* Messaging SDK is now called PWEngagement.
+### Changed
+
+- Migrated to use XCFrameworks
+
+## [3.7.5][] - 2020-04-02
+
+### Changed
+
+- Updated Mist location provider to support iOS 13+
+
+### Fixed
+
+- Fixed deadlock when tracking analytics for a received push notification
+
+## [3.7.4][] - 2019-10-01
+
+### Changed
+
+- Reformatted device token string for iOS 13
+- Added CoreNoAds subspec
+
+## [3.7.3][] - 2019-03-13
+
+### Changed
+
+- Improved consistency of beacon notifications received from killed app state
+
+## [3.7.2][] - 2019-01-10
+
+### Changed
+
+- Updated to MistSDK 1.4.2
+
+## [3.7.1][] - 2018-11-29
+
+### Changed
+
+- Updated to MistSDK 1.3.0
+
+## [3.7.0][] - 2018-11-14
+
+### Changed
+
+- Updated for PWCore 3.8.x compatibility using new automatic screen view analytic events and simplified custom event creation.
+
+## [3.6.1][] - 2018-10-16
+
+### Added
+
+- Added metadata parsing for on demand broadcasts
+
+### Fixed
+
+- Fixed incorrect campaign type for different broadcasts
+- Fixed crash when opening broadcast from a inactive state
+
+### Changed
+
+- Improved load time for broadcast with promotion data
+
+## [3.6.0][] - 2018-09-20
+
+### Added
+
+- Added When-In-Use location permission support
+- Added capability to unset all profile attributes by passing a nil dictionary
+
+## [3.5.1][] - 2018-08-27
+
+### Fixed
+
+- Fixed crash on iOS 12
+
+## [3.5.0][] - 2018-08-13
+
+### Changed
+
+- Increased iOS deployment target from 9.0 to 10.0
+
+### Fixed
+
+- Fixed device update token call
+
+## [3.4.3][] - 2018-06-14
+
+### Fixed
+
+- Fixed crash when opening broadcast from an inactive state
+
+## [3.4.2][] - 2018-05-31
+
+### Changed
+
+- Updated to PWCore 3.6.x
+
+### Fixed
+
+- Fixed OS timing issue on first app launch geofence entry
+
+## [3.4.1][] - 2018-05-21
+
+### Fixed
+
+- Fixed first app launch missed notifications
+
+## [3.4.0][] - 2018-05-07
+
+### Changed
+
+- Removed location and push notification permission prompting
+- Updated to PWCore 3.5.x
+
+## [3.3.2][] - 2018-04-16
+
+### Changed
+
+- Updated to PWCore 3.4.x
+
+### Fixed
+
+- Fixed crash when background location updates aren't enabled
+
+## [3.3.1][] - 2018-03-28
+
+### Changed
+
+- Location is no longer required to download promotion data
+
+### Added
+
+- Added notification when a user selects When-In-Use only permission
+
+## [3.3.0][] - 2018-02-22
+
+### Changed
+
+- Updated to PWCore 3.3.x
+
+### Fixed
+
+- Fixed crash when starting vBLE.
+
+## [3.2.0][] - 2017-12-18
+
+### Added
+
+- Added vBLE Beacon Ranging
+
+## [3.1.3][] - 2017-10-19
+
+### Changed
+
+- Updated PWCore to 3.1.3
+
+## [3.1.2][] - 2017-10-16
+
+### Changed
+
+- Changed the framework to dynamic.
+- Used latest logger functionality from PWCore.
+
+### Fixed
+
+- Performed internal fixes.
+
+## [3.1.1][] - 2017-08-14
+
+### Fixed
+
+- Fixed issue with title for broadcast campaigns.
+
+### Changed
+
+- Improved performance.
+
+## [3.1.0][[] - 2017-05-11
+
+### Changed
+
+- Messaging SDK is now called PWEngagement.

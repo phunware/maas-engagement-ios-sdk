@@ -13,7 +13,6 @@
 #import <PWEngagement/PWMEZoneMessage.h>
 #import <PWEngagement/PWMELocalNotification.h>
 #import <PWEngagement/PWMEAttributeManager.h>
-#import <PWEngagement/PWMistBeaconManager.h>
 #import <PWEngagement/PWVBLEManager.h>
 #import <PWEngagement/PWBeaconManager.h>
 #import <PWEngagement/PWMEDefines.h>
@@ -23,7 +22,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *const PWEngagementVersion = @"3.11.1";
+static NSString *const PWEngagementVersion = @"3.12.0";
 
 /**
  The message identifier key which may be included in the notification's userInfo dictionary.

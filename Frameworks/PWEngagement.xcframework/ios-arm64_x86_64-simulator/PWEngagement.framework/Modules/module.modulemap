@@ -6,6 +6,6 @@ framework module PWEngagement {
 }
 
 module PWEngagement.Swift {
-    header "PWEngagement-Swift.h"
-    requires objc
+  header "PWEngagement-Swift.h"
+  requires objc
 }
