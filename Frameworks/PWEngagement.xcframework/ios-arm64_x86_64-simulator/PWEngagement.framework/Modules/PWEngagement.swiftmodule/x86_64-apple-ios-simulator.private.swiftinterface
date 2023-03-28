@@ -73,6 +73,6 @@ public struct MessageRead : Codable {
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-extension PWEngagement.MessageCenterError : Swift.Equatable {}
-extension PWEngagement.MessageCenterError : Swift.Hashable {}
-extension PWEngagement.MessageCenterError : Swift.RawRepresentable {}
+extension MessageCenterError : Swift.Equatable {}
+extension MessageCenterError : Swift.Hashable {}
+extension MessageCenterError : Swift.RawRepresentable {}
