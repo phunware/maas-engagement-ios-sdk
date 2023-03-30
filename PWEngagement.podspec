@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'PWEngagement'
-  spec.version = '3.11.1'
+  spec.version = '3.12.0'
   spec.license = { :type => 'Copyright', :text => 'Copyright 2009-present Phunware Inc. All rights reserved.' }
   spec.summary = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
   spec.homepage = 'https://github.com/phunware/maas-engagement-ios-sdk/'
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url = 'https://twitter.com/phunware'
   
   spec.platform = :ios, '13.0'
-  spec.source = { :git => "https://github.com/phunware/maas-engagement-ios-sdk.git", :tag => "v#{spec.version}" }
+  spec.source = { :git => "https://github.com/phunware/maas-engagement-ios-sdk.git", :tag => "#{spec.version}" }
   spec.documentation_url = 'https://phunware.github.io/maas-engagement-ios-sdk/'
 
   spec.default_subspecs =
@@ -37,22 +37,4 @@ Pod::Spec.new do |spec|
     subspec.dependency 'PWEngagement/Core'
   end
 
-  spec.subspec 'MistBeaconProviderCore' do |subspec|
-    subspec.dependency 'PWEngagement/Core'
-    subspec.dependency 'MistSDKDR', '1.5.280'
-
-    subspec.vendored_frameworks = 'Frameworks/MistBeaconProvider.xcframework'
-    
-    subspec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    subspec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  end
-
-  spec.subspec 'MistBeaconProvider' do |subspec|
-    subspec.dependency 'PWEngagement/MistBeaconProviderCore'
-    subspec.dependency 'PWEngagement/DeviceIdentity'
-  end
-  
-  spec.subspec 'MistBeaconProviderWithLimitedDeviceIdentity' do |subspec|
-    subspec.dependency 'PWEngagement/MistBeaconProviderCore'
-  end
 end

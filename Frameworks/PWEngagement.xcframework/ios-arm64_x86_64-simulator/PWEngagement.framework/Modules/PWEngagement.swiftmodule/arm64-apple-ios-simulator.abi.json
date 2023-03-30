@@ -1,0 +1,2746 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PWCore",
+        "printedName": "PWCore",
+        "declKind": "Import",
+        "moduleName": "PWEngagement"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PushNotificationTracker",
+        "printedName": "PushNotificationTracker",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "didReceiveRemoteNotification",
+            "printedName": "didReceiveRemoteNotification(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker(cm)didReceiveRemoteNotification:",
+            "mangledName": "$s12PWEngagement23PushNotificationTrackerC016didReceiveRemoteC0yySDys11AnyHashableVypGFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "willPresent",
+            "printedName": "willPresent(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotification",
+                "printedName": "UserNotifications.UNNotification",
+                "usr": "c:objc(cs)UNNotification"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker(cm)willPresent:",
+            "mangledName": "$s12PWEngagement23PushNotificationTrackerC11willPresentyySo14UNNotificationCFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceive",
+            "printedName": "didReceive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UNNotificationResponse",
+                "printedName": "UserNotifications.UNNotificationResponse",
+                "usr": "c:objc(cs)UNNotificationResponse"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker(cm)didReceive:",
+            "mangledName": "$s12PWEngagement23PushNotificationTrackerC10didReceiveyySo22UNNotificationResponseCFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PushNotificationTracker",
+                "printedName": "PWEngagement.PushNotificationTracker",
+                "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker(im)init",
+            "mangledName": "$s12PWEngagement23PushNotificationTrackerCACycfc",
+            "moduleName": "PWEngagement",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker",
+        "mangledName": "$s12PWEngagement23PushNotificationTrackerC",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageResult",
+        "printedName": "MessageResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageResult.Type) -> ([PWEngagement.Message]) -> PWEngagement.MessageResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([PWEngagement.Message]) -> PWEngagement.MessageResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageResult",
+                        "printedName": "PWEngagement.MessageResult",
+                        "usr": "s:12PWEngagement13MessageResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[PWEngagement.Message]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Message",
+                            "printedName": "PWEngagement.Message",
+                            "usr": "c:@M@PWEngagement@objc(cs)Message"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageResult",
+                        "printedName": "PWEngagement.MessageResult",
+                        "usr": "s:12PWEngagement13MessageResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement13MessageResultO7successyACSayAA0B0CGcACmF",
+            "mangledName": "$s12PWEngagement13MessageResultO7successyACSayAA0B0CGcACmF",
+            "moduleName": "PWEngagement"
+          },
+          {
+            "kind": "Var",
+            "name": "failure",
+            "printedName": "failure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageResult.Type) -> (PWEngagement.MessageCenterError) -> PWEngagement.MessageResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PWEngagement.MessageCenterError) -> PWEngagement.MessageResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageResult",
+                        "printedName": "PWEngagement.MessageResult",
+                        "usr": "s:12PWEngagement13MessageResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageResult",
+                        "printedName": "PWEngagement.MessageResult",
+                        "usr": "s:12PWEngagement13MessageResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement13MessageResultO7failureyAcA0B11CenterErrorOcACmF",
+            "mangledName": "$s12PWEngagement13MessageResultO7failureyAcA0B11CenterErrorOcACmF",
+            "moduleName": "PWEngagement"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12PWEngagement13MessageResultO",
+        "mangledName": "$s12PWEngagement13MessageResultO",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageReadResult",
+        "printedName": "MessageReadResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageReadResult.Type) -> PWEngagement.MessageReadResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageReadResult",
+                    "printedName": "PWEngagement.MessageReadResult",
+                    "usr": "s:12PWEngagement17MessageReadResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageReadResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageReadResult",
+                        "printedName": "PWEngagement.MessageReadResult",
+                        "usr": "s:12PWEngagement17MessageReadResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement17MessageReadResultO7successyA2CmF",
+            "mangledName": "$s12PWEngagement17MessageReadResultO7successyA2CmF",
+            "moduleName": "PWEngagement"
+          },
+          {
+            "kind": "Var",
+            "name": "failure",
+            "printedName": "failure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageReadResult.Type) -> (PWEngagement.MessageCenterError) -> PWEngagement.MessageReadResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PWEngagement.MessageCenterError) -> PWEngagement.MessageReadResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageReadResult",
+                        "printedName": "PWEngagement.MessageReadResult",
+                        "usr": "s:12PWEngagement17MessageReadResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageReadResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageReadResult",
+                        "printedName": "PWEngagement.MessageReadResult",
+                        "usr": "s:12PWEngagement17MessageReadResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement17MessageReadResultO7failureyAcA0B11CenterErrorOcACmF",
+            "mangledName": "$s12PWEngagement17MessageReadResultO7failureyAcA0B11CenterErrorOcACmF",
+            "moduleName": "PWEngagement"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12PWEngagement17MessageReadResultO",
+        "mangledName": "$s12PWEngagement17MessageReadResultO",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageEventResult",
+        "printedName": "MessageEventResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageEventResult.Type) -> PWEngagement.MessageEventResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageEventResult",
+                    "printedName": "PWEngagement.MessageEventResult",
+                    "usr": "s:12PWEngagement18MessageEventResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageEventResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageEventResult",
+                        "printedName": "PWEngagement.MessageEventResult",
+                        "usr": "s:12PWEngagement18MessageEventResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement18MessageEventResultO7successyA2CmF",
+            "mangledName": "$s12PWEngagement18MessageEventResultO7successyA2CmF",
+            "moduleName": "PWEngagement"
+          },
+          {
+            "kind": "Var",
+            "name": "failure",
+            "printedName": "failure",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageEventResult.Type) -> (PWEngagement.MessageCenterError) -> PWEngagement.MessageEventResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PWEngagement.MessageCenterError) -> PWEngagement.MessageEventResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageEventResult",
+                        "printedName": "PWEngagement.MessageEventResult",
+                        "usr": "s:12PWEngagement18MessageEventResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageEventResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageEventResult",
+                        "printedName": "PWEngagement.MessageEventResult",
+                        "usr": "s:12PWEngagement18MessageEventResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement18MessageEventResultO7failureyAcA0B11CenterErrorOcACmF",
+            "mangledName": "$s12PWEngagement18MessageEventResultO7failureyAcA0B11CenterErrorOcACmF",
+            "moduleName": "PWEngagement"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12PWEngagement18MessageEventResultO",
+        "mangledName": "$s12PWEngagement18MessageEventResultO",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageCenterError",
+        "printedName": "MessageCenterError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "unableToComplete",
+            "printedName": "unableToComplete",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageCenterError",
+                    "printedName": "PWEngagement.MessageCenterError",
+                    "usr": "s:12PWEngagement18MessageCenterErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageCenterError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement18MessageCenterErrorO16unableToCompleteyA2CmF",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO16unableToCompleteyA2CmF",
+            "moduleName": "PWEngagement"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidResponse",
+            "printedName": "invalidResponse",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageCenterError",
+                    "printedName": "PWEngagement.MessageCenterError",
+                    "usr": "s:12PWEngagement18MessageCenterErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageCenterError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement18MessageCenterErrorO15invalidResponseyA2CmF",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO15invalidResponseyA2CmF",
+            "moduleName": "PWEngagement"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidData",
+            "printedName": "invalidData",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageCenterError",
+                    "printedName": "PWEngagement.MessageCenterError",
+                    "usr": "s:12PWEngagement18MessageCenterErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageCenterError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement18MessageCenterErrorO11invalidDatayA2CmF",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO11invalidDatayA2CmF",
+            "moduleName": "PWEngagement"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToMarkMessage",
+            "printedName": "unableToMarkMessage",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageCenterError",
+                    "printedName": "PWEngagement.MessageCenterError",
+                    "usr": "s:12PWEngagement18MessageCenterErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageCenterError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement18MessageCenterErrorO012unableToMarkB0yA2CmF",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO012unableToMarkB0yA2CmF",
+            "moduleName": "PWEngagement"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToPostMessageEvent",
+            "printedName": "unableToPostMessageEvent",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageCenterError",
+                    "printedName": "PWEngagement.MessageCenterError",
+                    "usr": "s:12PWEngagement18MessageCenterErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PWEngagement.MessageCenterError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12PWEngagement18MessageCenterErrorO012unableToPostB5EventyA2CmF",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO012unableToPostB5EventyA2CmF",
+            "moduleName": "PWEngagement"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PWEngagement.MessageCenterError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageCenterError",
+                    "printedName": "PWEngagement.MessageCenterError",
+                    "usr": "s:12PWEngagement18MessageCenterErrorO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12PWEngagement18MessageCenterErrorO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO8rawValueACSgSS_tcfc",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12PWEngagement18MessageCenterErrorO8rawValueSSvp",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO8rawValueSSvp",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12PWEngagement18MessageCenterErrorO8rawValueSSvg",
+                "mangledName": "$s12PWEngagement18MessageCenterErrorO8rawValueSSvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12PWEngagement18MessageCenterErrorO",
+        "mangledName": "$s12PWEngagement18MessageCenterErrorO",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageEvent",
+        "printedName": "MessageEvent",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessageEvent",
+                "printedName": "PWEngagement.MessageEvent",
+                "usr": "s:12PWEngagement12MessageEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12PWEngagement12MessageEventV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12PWEngagement12MessageEventV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12PWEngagement12MessageEventV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12PWEngagement12MessageEventV6encode2toys7Encoder_p_tKF",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12PWEngagement12MessageEventV",
+        "mangledName": "$s12PWEngagement12MessageEventV",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageRead",
+        "printedName": "MessageRead",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessageRead",
+                "printedName": "PWEngagement.MessageRead",
+                "usr": "s:12PWEngagement11MessageReadV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12PWEngagement11MessageReadV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12PWEngagement11MessageReadV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12PWEngagement11MessageReadV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12PWEngagement11MessageReadV6encode2toys7Encoder_p_tKF",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12PWEngagement11MessageReadV",
+        "mangledName": "$s12PWEngagement11MessageReadV",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Message",
+        "printedName": "Message",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "identifier",
+            "printedName": "identifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)identifier",
+            "mangledName": "$s12PWEngagement7MessageC10identifierSSSgvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)identifier",
+                "mangledName": "$s12PWEngagement7MessageC10identifierSSSgvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "campaignID",
+            "printedName": "campaignID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)campaignID",
+            "mangledName": "$s12PWEngagement7MessageC10campaignIDSSvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)campaignID",
+                "mangledName": "$s12PWEngagement7MessageC10campaignIDSSvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "campaignType",
+            "printedName": "campaignType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)campaignType",
+            "mangledName": "$s12PWEngagement7MessageC12campaignTypeSSvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)campaignType",
+                "mangledName": "$s12PWEngagement7MessageC12campaignTypeSSvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "metaData",
+            "printedName": "metaData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)metaData",
+            "mangledName": "$s12PWEngagement7MessageC8metaDataSDyS2SGSgvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Swift.String]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)metaData",
+                "mangledName": "$s12PWEngagement7MessageC8metaDataSDyS2SGSgvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "alertTitle",
+            "printedName": "alertTitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)alertTitle",
+            "mangledName": "$s12PWEngagement7MessageC10alertTitleSSSgvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)alertTitle",
+                "mangledName": "$s12PWEngagement7MessageC10alertTitleSSSgvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "alertBody",
+            "printedName": "alertBody",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)alertBody",
+            "mangledName": "$s12PWEngagement7MessageC9alertBodySSSgvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)alertBody",
+                "mangledName": "$s12PWEngagement7MessageC9alertBodySSSgvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "promotionTitle",
+            "printedName": "promotionTitle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)promotionTitle",
+            "mangledName": "$s12PWEngagement7MessageC14promotionTitleSSSgvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)promotionTitle",
+                "mangledName": "$s12PWEngagement7MessageC14promotionTitleSSSgvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "promotionBody",
+            "printedName": "promotionBody",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)promotionBody",
+            "mangledName": "$s12PWEngagement7MessageC13promotionBodySSSgvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)promotionBody",
+                "mangledName": "$s12PWEngagement7MessageC13promotionBodySSSgvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isRead",
+            "printedName": "isRead",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)isRead",
+            "mangledName": "$s12PWEngagement7MessageC6isReadSbvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)isRead",
+                "mangledName": "$s12PWEngagement7MessageC6isReadSbvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timestamp",
+            "printedName": "timestamp",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)timestamp",
+            "mangledName": "$s12PWEngagement7MessageC9timestamp10Foundation4DateVSgvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)timestamp",
+                "mangledName": "$s12PWEngagement7MessageC9timestamp10Foundation4DateVSgvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(identifier:campaignID:alertTitle:alertBody:promotionTitle:promotionBody:metaData:campaignType:isRead:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "PWEngagement.Message",
+                "usr": "c:@M@PWEngagement@objc(cs)Message"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(im)initWithIdentifier:campaignID:alertTitle:alertBody:promotionTitle:promotionBody:metaData:campaignType:isRead:timestamp:",
+            "mangledName": "$s12PWEngagement7MessageC10identifier10campaignID10alertTitle0F4Body09promotionG00iH08metaData0D4Type6isRead9timestampACSSSg_SSA4NSDyS2SGSgSSSb10Foundation4DateVSgtcfc",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "unpack",
+            "printedName": "unpack(dict:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PWEngagement.Message?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "PWEngagement.Message",
+                    "usr": "c:@M@PWEngagement@objc(cs)Message"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(cm)unpackWithDict:",
+            "mangledName": "$s12PWEngagement7MessageC6unpack4dictACSgSDySSypG_tFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "PWEngagement.Message",
+                "usr": "c:@M@PWEngagement@objc(cs)Message"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12PWEngagement7MessageC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12PWEngagement7MessageC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Required",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "copy",
+            "printedName": "copy(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ObjectiveC.NSZone?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSZone",
+                    "printedName": "ObjectiveC.NSZone",
+                    "usr": "s:10ObjectiveC6NSZoneV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(im)copyWithZone:",
+            "mangledName": "$s12PWEngagement7MessageC4copy4withyp10ObjectiveC6NSZoneVSg_tF",
+            "moduleName": "PWEngagement",
+            "objc_name": "copyWithZone:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "PWEngagement.Message",
+                "usr": "c:@M@PWEngagement@objc(cs)Message"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(im)init",
+            "mangledName": "$s12PWEngagement7MessageCACycfc",
+            "moduleName": "PWEngagement",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12PWEngagement7MessageC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12PWEngagement7MessageC6encode2toys7Encoder_p_tKF",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PWEngagement@objc(cs)Message",
+        "mangledName": "$s12PWEngagement7MessageC",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PWEngagement",
+        "printedName": "PWEngagement",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "fetchMessages",
+            "printedName": "fetchMessages(startDate:endDate:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([PWEngagement.Message]?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "([PWEngagement.Message]?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[PWEngagement.Message]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Array",
+                            "printedName": "[PWEngagement.Message]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Message",
+                                "printedName": "PWEngagement.Message",
+                                "usr": "c:@M@PWEngagement@objc(cs)Message"
+                              }
+                            ],
+                            "usr": "s:Sa"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So12PWEngagementCAAE13fetchMessages9startDate03endE010completiony10Foundation0E0V_AIySayAA7MessageCGSg_s5Error_pSgtctFZ",
+            "mangledName": "$sSo12PWEngagementCAAE13fetchMessages9startDate03endE010completiony10Foundation0E0V_AIySayAA7MessageCGSg_s5Error_pSgtctFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "markMessageAsRead",
+            "printedName": "markMessageAsRead(messageIdentifier:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So12PWEngagementCAAE17markMessageAsRead17messageIdentifier10completionySS_ys5Error_pSgctFZ",
+            "mangledName": "$sSo12PWEngagementCAAE17markMessageAsRead17messageIdentifier10completionySS_ys5Error_pSgctFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "markMessageAsUnread",
+            "printedName": "markMessageAsUnread(messageIdentifier:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So12PWEngagementCAAE19markMessageAsUnread17messageIdentifier10completionySS_ys5Error_pSgctFZ",
+            "mangledName": "$sSo12PWEngagementCAAE19markMessageAsUnread17messageIdentifier10completionySS_ys5Error_pSgctFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "postMessageEvent",
+            "printedName": "postMessageEvent(messageIdentifier:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Error?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PWEngagement@@objc(cs)PWEngagement(cm)postMessageEventWithMessageIdentifier:completion:",
+            "mangledName": "$sSo12PWEngagementCAAE16postMessageEvent17messageIdentifier10completionySS_ys5Error_pSgctFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "objc_name": "postMessageEventWithMessageIdentifier:completion:",
+            "declAttributes": [
+              "Final",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)PWEngagement",
+        "moduleName": "PWEngagement",
+        "isOpen": true,
+        "objc_name": "PWEngagement",
+        "declAttributes": [
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 239,
+      "length": 43,
+      "value": "\"https:\/\/message-center-api%@.phunware.com\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 316,
+      "length": 6,
+      "value": "\"v1.0\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 356,
+      "length": 20,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 364,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 375,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 405,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 443,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 485,
+      "length": 9,
+      "value": "\"startTs\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 524,
+      "length": 7,
+      "value": "\"endTs\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 564,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 605,
+      "length": 8,
+      "value": "\"isRead\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 644,
+      "length": 10,
+      "value": "\"sentTime\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 516,
+      "length": 59,
+      "value": "\"Unable to complete your request.  Please try again later.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 603,
+      "length": 35,
+      "value": "\"Invalid response from the server.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 662,
+      "length": 43,
+      "value": "\"Data received from the server is invalid.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 737,
+      "length": 49,
+      "value": "\"Unable to update message with read\/unread mark.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 823,
+      "length": 31,
+      "value": "\"Unable to post message event.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 516,
+      "length": 59,
+      "value": "\"Unable to complete your request.  Please try again later.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 603,
+      "length": 35,
+      "value": "\"Invalid response from the server.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 662,
+      "length": 43,
+      "value": "\"Data received from the server is invalid.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 737,
+      "length": 49,
+      "value": "\"Unable to update message with read\/unread mark.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
+      "kind": "StringLiteral",
+      "offset": 823,
+      "length": 31,
+      "value": "\"Unable to post message event.\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 546,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 578,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 612,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 546,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 578,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 612,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 518,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 550,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 584,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 518,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 550,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 584,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
+      "kind": "StringLiteral",
+      "offset": 329,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
+      "kind": "StringLiteral",
+      "offset": 329,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
+      "kind": "StringLiteral",
+      "offset": 411,
+      "length": 7,
+      "value": "\"PWEngagement.Message\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
+      "kind": "StringLiteral",
+      "offset": 3958,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
+      "kind": "StringLiteral",
+      "offset": 3958,
+      "length": 12,
+      "value": "\"campaignId\""
+    }
+  ]
+}
