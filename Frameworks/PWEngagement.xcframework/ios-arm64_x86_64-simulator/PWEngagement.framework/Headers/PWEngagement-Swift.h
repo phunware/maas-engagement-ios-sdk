@@ -267,13 +267,19 @@ SWIFT_CLASS("_TtC12PWEngagement7Message")
 @property (nonatomic, readonly, copy) NSString * _Nullable alertBody;
 @property (nonatomic, readonly, copy) NSString * _Nullable promotionTitle;
 @property (nonatomic, readonly, copy) NSString * _Nullable promotionBody;
+@property (nonatomic, readonly, copy) NSDate * _Nullable promotionExpirationDate;
 @property (nonatomic, readonly) BOOL isRead;
 @property (nonatomic, readonly, copy) NSDate * _Nullable timestamp;
-- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier campaignID:(NSString * _Nonnull)campaignID alertTitle:(NSString * _Nullable)alertTitle alertBody:(NSString * _Nullable)alertBody promotionTitle:(NSString * _Nullable)promotionTitle promotionBody:(NSString * _Nullable)promotionBody metaData:(NSDictionary<NSString *, NSString *> * _Nullable)metaData campaignType:(NSString * _Nonnull)campaignType isRead:(BOOL)isRead timestamp:(NSDate * _Nullable)timestamp OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier campaignID:(NSString * _Nonnull)campaignID alertTitle:(NSString * _Nullable)alertTitle alertBody:(NSString * _Nullable)alertBody promotionTitle:(NSString * _Nullable)promotionTitle promotionBody:(NSString * _Nullable)promotionBody promotionExpirationDate:(NSDate * _Nullable)promotionExpirationDate metaData:(NSDictionary<NSString *, NSString *> * _Nullable)metaData campaignType:(NSString * _Nonnull)campaignType isRead:(BOOL)isRead timestamp:(NSDate * _Nullable)timestamp OBJC_DESIGNATED_INITIALIZER;
 + (Message * _Nullable)unpackWithDict:(NSDictionary<NSString *, id> * _Nonnull)dict SWIFT_WARN_UNUSED_RESULT;
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@interface Message (SWIFT_EXTENSION(PWEngagement))
++ (NSDate * _Nullable)promotionExpirationDateFromString:(NSString * _Nullable)dateString SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -570,13 +576,19 @@ SWIFT_CLASS("_TtC12PWEngagement7Message")
 @property (nonatomic, readonly, copy) NSString * _Nullable alertBody;
 @property (nonatomic, readonly, copy) NSString * _Nullable promotionTitle;
 @property (nonatomic, readonly, copy) NSString * _Nullable promotionBody;
+@property (nonatomic, readonly, copy) NSDate * _Nullable promotionExpirationDate;
 @property (nonatomic, readonly) BOOL isRead;
 @property (nonatomic, readonly, copy) NSDate * _Nullable timestamp;
-- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier campaignID:(NSString * _Nonnull)campaignID alertTitle:(NSString * _Nullable)alertTitle alertBody:(NSString * _Nullable)alertBody promotionTitle:(NSString * _Nullable)promotionTitle promotionBody:(NSString * _Nullable)promotionBody metaData:(NSDictionary<NSString *, NSString *> * _Nullable)metaData campaignType:(NSString * _Nonnull)campaignType isRead:(BOOL)isRead timestamp:(NSDate * _Nullable)timestamp OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithIdentifier:(NSString * _Nullable)identifier campaignID:(NSString * _Nonnull)campaignID alertTitle:(NSString * _Nullable)alertTitle alertBody:(NSString * _Nullable)alertBody promotionTitle:(NSString * _Nullable)promotionTitle promotionBody:(NSString * _Nullable)promotionBody promotionExpirationDate:(NSDate * _Nullable)promotionExpirationDate metaData:(NSDictionary<NSString *, NSString *> * _Nullable)metaData campaignType:(NSString * _Nonnull)campaignType isRead:(BOOL)isRead timestamp:(NSDate * _Nullable)timestamp OBJC_DESIGNATED_INITIALIZER;
 + (Message * _Nullable)unpackWithDict:(NSDictionary<NSString *, id> * _Nonnull)dict SWIFT_WARN_UNUSED_RESULT;
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@interface Message (SWIFT_EXTENSION(PWEngagement))
++ (NSDate * _Nullable)promotionExpirationDateFromString:(NSString * _Nullable)dateString SWIFT_WARN_UNUSED_RESULT;
 @end
 
 

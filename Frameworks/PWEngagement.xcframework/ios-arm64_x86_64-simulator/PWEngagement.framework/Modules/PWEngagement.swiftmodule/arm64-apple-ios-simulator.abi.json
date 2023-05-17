@@ -1003,98 +1003,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "MessageRead",
-        "printedName": "MessageRead",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "MessageRead",
-                "printedName": "PWEngagement.MessageRead",
-                "usr": "s:12PWEngagement11MessageReadV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12PWEngagement11MessageReadV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s12PWEngagement11MessageReadV4fromACs7Decoder_p_tKcfc",
-            "moduleName": "PWEngagement",
-            "implicit": true,
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:12PWEngagement11MessageReadV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s12PWEngagement11MessageReadV6encode2toys7Encoder_p_tKF",
-            "moduleName": "PWEngagement",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:12PWEngagement11MessageReadV",
-        "mangledName": "$s12PWEngagement11MessageReadV",
-        "moduleName": "PWEngagement",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "PWEngagement",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "Message",
         "printedName": "Message",
         "children": [
@@ -1624,6 +1532,72 @@
           },
           {
             "kind": "Var",
+            "name": "promotionExpirationDate",
+            "printedName": "promotionExpirationDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(py)promotionExpirationDate",
+            "mangledName": "$s12PWEngagement7MessageC23promotionExpirationDate10Foundation0E0VSgvp",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PWEngagement@objc(cs)Message(im)promotionExpirationDate",
+                "mangledName": "$s12PWEngagement7MessageC23promotionExpirationDate10Foundation0E0VSgvg",
+                "moduleName": "PWEngagement",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "isRead",
             "printedName": "isRead",
             "children": [
@@ -1741,7 +1715,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(identifier:campaignID:alertTitle:alertBody:promotionTitle:promotionBody:metaData:campaignType:isRead:timestamp:)",
+            "printedName": "init(identifier:campaignID:alertTitle:alertBody:promotionTitle:promotionBody:promotionExpirationDate:metaData:campaignType:isRead:timestamp:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1821,6 +1795,20 @@
                     "name": "String",
                     "printedName": "Swift.String",
                     "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
                   }
                 ],
                 "usr": "s:Sq"
@@ -1881,13 +1869,42 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@PWEngagement@objc(cs)Message(im)initWithIdentifier:campaignID:alertTitle:alertBody:promotionTitle:promotionBody:metaData:campaignType:isRead:timestamp:",
-            "mangledName": "$s12PWEngagement7MessageC10identifier10campaignID10alertTitle0F4Body09promotionG00iH08metaData0D4Type6isRead9timestampACSSSg_SSA4NSDyS2SGSgSSSb10Foundation4DateVSgtcfc",
+            "usr": "c:@M@PWEngagement@objc(cs)Message(im)initWithIdentifier:campaignID:alertTitle:alertBody:promotionTitle:promotionBody:promotionExpirationDate:metaData:campaignType:isRead:timestamp:",
+            "mangledName": "$s12PWEngagement7MessageC10identifier10campaignID10alertTitle0F4Body09promotionG00iH00I14ExpirationDate8metaData0D4Type6isRead9timestampACSSSg_SSA4O10Foundation0K0VSgSDyS2SGSgSSSbAStcfc",
             "moduleName": "PWEngagement",
             "declAttributes": [
               "AccessControl",
               "ObjC"
             ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Message",
+                "printedName": "PWEngagement.Message",
+                "usr": "c:@M@PWEngagement@objc(cs)Message"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12PWEngagement7MessageC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12PWEngagement7MessageC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "PWEngagement",
+            "declAttributes": [
+              "Required",
+              "AccessControl"
+            ],
+            "throwing": true,
             "init_kind": "Designated"
           },
           {
@@ -1940,35 +1957,6 @@
               "ObjC"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Message",
-                "printedName": "PWEngagement.Message",
-                "usr": "c:@M@PWEngagement@objc(cs)Message"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12PWEngagement7MessageC4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s12PWEngagement7MessageC4fromACs7Decoder_p_tKcfc",
-            "moduleName": "PWEngagement",
-            "declAttributes": [
-              "Required",
-              "AccessControl"
-            ],
-            "throwing": true,
-            "init_kind": "Designated"
           },
           {
             "kind": "Function",
@@ -2057,6 +2045,54 @@
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "promotionExpirationDate",
+            "printedName": "promotionExpirationDate(fromString:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PWEngagement@objc(cs)Message(cm)promotionExpirationDateFromString:",
+            "mangledName": "$s12PWEngagement7MessageC23promotionExpirationDate10fromString10Foundation0E0VSgSSSg_tFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -2066,7 +2102,6 @@
         "declAttributes": [
           "AccessControl",
           "ObjCMembers",
-          "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -2137,6 +2172,108 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageRead",
+        "printedName": "MessageRead",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessageRead",
+                "printedName": "PWEngagement.MessageRead",
+                "usr": "s:12PWEngagement11MessageReadV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12PWEngagement11MessageReadV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s12PWEngagement11MessageReadV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12PWEngagement11MessageReadV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s12PWEngagement11MessageReadV6encode2toys7Encoder_p_tKF",
+            "moduleName": "PWEngagement",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12PWEngagement11MessageReadV",
+        "mangledName": "$s12PWEngagement11MessageReadV",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PWEngagement",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -2666,81 +2803,165 @@
       "value": "\"campaignId\""
     },
     {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
       "kind": "StringLiteral",
-      "offset": 518,
-      "length": 10,
-      "value": "\"deviceId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
-      "kind": "StringLiteral",
-      "offset": 550,
-      "length": 7,
-      "value": "\"appId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
-      "kind": "StringLiteral",
-      "offset": 584,
-      "length": 12,
-      "value": "\"campaignId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
-      "kind": "StringLiteral",
-      "offset": 518,
-      "length": 10,
-      "value": "\"deviceId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
-      "kind": "StringLiteral",
-      "offset": 550,
-      "length": 7,
-      "value": "\"appId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
-      "kind": "StringLiteral",
-      "offset": 584,
-      "length": 12,
-      "value": "\"campaignId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
-      "kind": "StringLiteral",
-      "offset": 329,
-      "length": 6,
-      "value": "\"data\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
-      "kind": "StringLiteral",
-      "offset": 329,
-      "length": 6,
-      "value": "\"data\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
-      "kind": "StringLiteral",
-      "offset": 411,
+      "offset": 125,
       "length": 7,
       "value": "\"PWEngagement.Message\""
     },
     {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
       "kind": "StringLiteral",
-      "offset": 3958,
+      "offset": 4137,
+      "length": 13,
+      "value": "\"en_US_POSIX\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 4183,
+      "length": 24,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ssX\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 4419,
+      "length": 13,
+      "value": "\"en_US_POSIX\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 4465,
+      "length": 21,
+      "value": "\"yyyy-MM-dd HH:mm:ss\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 4537,
+      "length": 21,
+      "value": "\"America\/Los_Angeles\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 4763,
+      "length": 13,
+      "value": "\"en_US_POSIX\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 4809,
+      "length": 30,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 4890,
+      "length": 21,
+      "value": "\"America\/Los_Angeles\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 6375,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 6406,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 6568,
+      "length": 25,
+      "value": "\"promotionExpirationDate\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 6375,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 6406,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",
+      "kind": "StringLiteral",
+      "offset": 6568,
+      "length": 25,
+      "value": "\"promotionExpirationDate\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 518,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 550,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 584,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 518,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 550,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageRead.swift",
+      "kind": "StringLiteral",
+      "offset": 584,
       "length": 12,
       "value": "\"campaignId\""
     },
     {
       "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
       "kind": "StringLiteral",
-      "offset": 3958,
-      "length": 12,
-      "value": "\"campaignId\""
+      "offset": 336,
+      "length": 6,
+      "value": "\"data\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageHistory.swift",
+      "kind": "StringLiteral",
+      "offset": 336,
+      "length": 6,
+      "value": "\"data\""
     }
   ]
 }

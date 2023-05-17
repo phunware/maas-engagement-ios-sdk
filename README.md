@@ -6,7 +6,7 @@ This is Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Servi
 
 Requirements
 ------------
-- PWCore 3.11.x
+- PWCore 3.12.x
 - iOS 13.0 or greater
 - Xcode 12 or greater
 
@@ -19,12 +19,18 @@ It is required to use [CocoaPods](http://www.cocoapods.org) 1.10 or greater to i
 pod 'PWEngagement'
 ````
 
+To enable support for Mist virtual beacons, add the `MistBeaconProvider` subspec:
+
+````ruby
+pod 'PWEngagement/MistBeaconProvider'
+````
+
 Documentation
 ------------
 Framework documentation is included in the the repository's Documents folder in both HTML and Docset formats.
 
 - [API Reference](http://phunware.github.io/maas-engagement-ios-sdk/)
-- Documentation can be found at [https://pw-me.readme.io/docs](https://pw-me.readme.io/docs)
+- Documentation can be found at [developer.phunware.com](https://developer.phunware.com/pages/viewpage.action?pageId=3409591)
 
 **Important Note:** To align with best practices, PWEngagement no longer prompts for notification nor location permissions, leaving control to the app developer. For PWEngagement to fully function as designed, both permissions must be granted.
 

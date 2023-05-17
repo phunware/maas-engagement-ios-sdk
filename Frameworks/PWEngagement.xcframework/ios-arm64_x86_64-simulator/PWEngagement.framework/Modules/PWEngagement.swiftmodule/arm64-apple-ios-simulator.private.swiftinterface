@@ -51,10 +51,6 @@ public struct MessageEvent : Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct MessageRead : Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
 @objc @objcMembers public class Message : NSObject, Codable, NSCopying {
   @objc final public let identifier: String?
   @objc final public let campaignID: String
@@ -64,14 +60,22 @@ public struct MessageRead : Codable {
   @objc final public let alertBody: String?
   @objc final public let promotionTitle: String?
   @objc final public let promotionBody: String?
+  @objc final public let promotionExpirationDate: Date?
   @objc final public let isRead: Bool
   @objc final public let timestamp: Date?
-  @objc public init(identifier: String?, campaignID: String, alertTitle: String?, alertBody: String?, promotionTitle: String?, promotionBody: String?, metaData: [String : String]?, campaignType: String, isRead: Bool, timestamp: Date?)
-  @objc public static func unpack(dict: [String : Any]) -> Message?
+  @objc public init(identifier: String?, campaignID: String, alertTitle: String?, alertBody: String?, promotionTitle: String?, promotionBody: String?, promotionExpirationDate: Date?, metaData: [String : String]?, campaignType: String, isRead: Bool, timestamp: Date?)
   required public init(from decoder: Decoder) throws
+  @objc public static func unpack(dict: [String : Any]) -> Message?
   @objc public func copy(with zone: NSZone? = nil) -> Any
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
+}
+extension Message {
+  @objc public static func promotionExpirationDate(fromString dateString: String?) -> Date?
+}
+public struct MessageRead : Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 extension MessageCenterError : Swift.Equatable {}
 extension MessageCenterError : Swift.Hashable {}
