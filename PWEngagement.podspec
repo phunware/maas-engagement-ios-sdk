@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'PWEngagement'
-  spec.version = '3.13.0-beta.1'
+  spec.version = '3.13.0-beta.2'
   spec.license = { :type => 'Copyright', :text => 'Copyright 2009-present Phunware Inc. All rights reserved.' }
   spec.summary = "Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Service platform"
   spec.homepage = 'https://github.com/phunware/maas-engagement-ios-sdk/'

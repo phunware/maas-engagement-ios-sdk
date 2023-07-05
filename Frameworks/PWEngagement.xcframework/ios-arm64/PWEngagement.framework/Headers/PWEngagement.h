@@ -45,27 +45,27 @@ extern NSString *const PWMEGeoZoneIdentifierKey;
 extern NSString *const PWMEGeoZoneIdentifierArrayKey;
 
 /**
- * Posted when determines that the device enters a geo zone. The zone identifer is included in the notification's userInfo dictionary with the `PWMEGeoZoneIdentifierKey` key.
+ * Posted when determines that the device enters a geo zone. The zone identifier is included in the notification's userInfo dictionary with the `PWMEGeoZoneIdentifierKey` key.
  */
 extern NSString *const PWMEEnterGeoZoneNotificationKey;
 
 /**
- * Posted when the zone manager determines that the device exits a geo zone. The zone identifer is included in the notification's userInfo dictionary with the `PWMEGeoZoneIdentifierKey` key.
+ * Posted when the zone manager determines that the device exits a geo zone. The zone identifier is included in the notification's userInfo dictionary with the `PWMEGeoZoneIdentifierKey` key.
  */
 extern NSString *const PWMEExitGeoZoneNotificationKey;
 
 /**
- * Posted when new zones are added to the zone manager's list of available geo zones. The identifers of the new zones are included in the notification's userInfo dictionary with the 'PWMEGeoZoneIdentifierArrayKey' key.
+ * Posted when new zones are added to the zone manager's list of available geo zones. The identifiers of the new zones are included in the notification's userInfo dictionary with the 'PWMEGeoZoneIdentifierArrayKey' key.
  */
 extern NSString *const PWMEAddGeoZonesNotificationKey;
 
 /**
- * Posted when zones are removed from the zone manager's list of available geo zones. The identifers of the removed zones are included in the notification's userInfo dictionary with the 'PWMEGeoZoneIdentifierArrayKey' key.
+ * Posted when zones are removed from the zone manager's list of available geo zones. The identifiers of the removed zones are included in the notification's userInfo dictionary with the 'PWMEGeoZoneIdentifierArrayKey' key.
  */
 extern NSString *const PWMEDeleteGeoZonesNotificationKey;
 
 /**
- * Posted when the information about one or more geo zones is modified. The identifers of the modified zones are included in the notification's userInfo dictionary with the 'PWMEGeoZoneIdentifierArrayKey' key.
+ * Posted when the information about one or more geo zones is modified. The identifiers of the modified zones are included in the notification's userInfo dictionary with the 'PWMEGeoZoneIdentifierArrayKey' key.
  */
 extern NSString *const PWMEModifyGeoZonesNotificationKey;
 

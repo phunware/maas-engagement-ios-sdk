@@ -69,11 +69,16 @@ static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAN
 @property (readonly, nonnull) NSDictionary <NSString *, id> *metaData;
 
 /**
+ Returns the internal unique identifier of the message.
+ */
+@property (readonly, nullable) NSString *messageIdentifier;
+
+/**
  Returns the internal unique identifier of the message. This identifier also idenfities the campaign this message was sent for.
  @discussion There can be at most one message associated with a campaign at any given time.
- @return The internal unique identifier message.
+ @return The internal unique campaign identifier of the message.
  */
-@property (readonly, nullable) NSString *identifier;
+@property (readonly, nullable) NSString *campaignIdentifier;
 
 /**
  A string containing the campaign type of the message.
