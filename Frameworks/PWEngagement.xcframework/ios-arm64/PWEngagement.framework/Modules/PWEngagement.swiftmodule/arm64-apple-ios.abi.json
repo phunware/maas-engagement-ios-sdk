@@ -725,13 +725,41 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
+                "printedName": "(PWEngagement.MessageCenterError.Type) -> (Swift.Error?) -> PWEngagement.MessageCenterError",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "MessageCenterError",
-                    "printedName": "PWEngagement.MessageCenterError",
-                    "usr": "s:12PWEngagement18MessageCenterErrorO"
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> PWEngagement.MessageCenterError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(error: Swift.Error?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.Error?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "kind": "TypeNominal",
@@ -750,8 +778,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12PWEngagement18MessageCenterErrorO16unableToCompleteyA2CmF",
-            "mangledName": "$s12PWEngagement18MessageCenterErrorO16unableToCompleteyA2CmF",
+            "usr": "s:12PWEngagement18MessageCenterErrorO16unableToCompleteyACs0D0_pSg_tcACmF",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO16unableToCompleteyACs0D0_pSg_tcACmF",
             "moduleName": "PWEngagement"
           },
           {
@@ -799,13 +827,41 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
+                "printedName": "(PWEngagement.MessageCenterError.Type) -> (Swift.Error?) -> PWEngagement.MessageCenterError",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "MessageCenterError",
-                    "printedName": "PWEngagement.MessageCenterError",
-                    "usr": "s:12PWEngagement18MessageCenterErrorO"
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?) -> PWEngagement.MessageCenterError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MessageCenterError",
+                        "printedName": "PWEngagement.MessageCenterError",
+                        "usr": "s:12PWEngagement18MessageCenterErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(error: Swift.Error?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.Error?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "kind": "TypeNominal",
@@ -824,121 +880,14 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:12PWEngagement18MessageCenterErrorO11invalidDatayA2CmF",
-            "mangledName": "$s12PWEngagement18MessageCenterErrorO11invalidDatayA2CmF",
+            "usr": "s:12PWEngagement18MessageCenterErrorO11invalidDatayACs0D0_pSg_tcACmF",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO11invalidDatayACs0D0_pSg_tcACmF",
             "moduleName": "PWEngagement"
           },
           {
             "kind": "Var",
-            "name": "unableToMarkMessage",
-            "printedName": "unableToMarkMessage",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MessageCenterError",
-                    "printedName": "PWEngagement.MessageCenterError",
-                    "usr": "s:12PWEngagement18MessageCenterErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PWEngagement.MessageCenterError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MessageCenterError",
-                        "printedName": "PWEngagement.MessageCenterError",
-                        "usr": "s:12PWEngagement18MessageCenterErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12PWEngagement18MessageCenterErrorO012unableToMarkB0yA2CmF",
-            "mangledName": "$s12PWEngagement18MessageCenterErrorO012unableToMarkB0yA2CmF",
-            "moduleName": "PWEngagement"
-          },
-          {
-            "kind": "Var",
-            "name": "unableToPostMessageEvent",
-            "printedName": "unableToPostMessageEvent",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(PWEngagement.MessageCenterError.Type) -> PWEngagement.MessageCenterError",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MessageCenterError",
-                    "printedName": "PWEngagement.MessageCenterError",
-                    "usr": "s:12PWEngagement18MessageCenterErrorO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "PWEngagement.MessageCenterError.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "MessageCenterError",
-                        "printedName": "PWEngagement.MessageCenterError",
-                        "usr": "s:12PWEngagement18MessageCenterErrorO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:12PWEngagement18MessageCenterErrorO012unableToPostB5EventyA2CmF",
-            "mangledName": "$s12PWEngagement18MessageCenterErrorO012unableToPostB5EventyA2CmF",
-            "moduleName": "PWEngagement"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rawValue:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "PWEngagement.MessageCenterError?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "MessageCenterError",
-                    "printedName": "PWEngagement.MessageCenterError",
-                    "usr": "s:12PWEngagement18MessageCenterErrorO"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:12PWEngagement18MessageCenterErrorO8rawValueACSgSS_tcfc",
-            "mangledName": "$s12PWEngagement18MessageCenterErrorO8rawValueACSgSS_tcfc",
-            "moduleName": "PWEngagement",
-            "implicit": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "rawValue",
-            "printedName": "rawValue",
+            "name": "description",
+            "printedName": "description",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -948,10 +897,12 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:12PWEngagement18MessageCenterErrorO8rawValueSSvp",
-            "mangledName": "$s12PWEngagement18MessageCenterErrorO8rawValueSSvp",
+            "usr": "s:12PWEngagement18MessageCenterErrorO11descriptionSSvp",
+            "mangledName": "$s12PWEngagement18MessageCenterErrorO11descriptionSSvp",
             "moduleName": "PWEngagement",
-            "implicit": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
             "accessors": [
               {
                 "kind": "Accessor",
@@ -966,10 +917,9 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12PWEngagement18MessageCenterErrorO8rawValueSSvg",
-                "mangledName": "$s12PWEngagement18MessageCenterErrorO8rawValueSSvg",
+                "usr": "s:12PWEngagement18MessageCenterErrorO11descriptionSSvg",
+                "mangledName": "$s12PWEngagement18MessageCenterErrorO11descriptionSSvg",
                 "moduleName": "PWEngagement",
-                "implicit": true,
                 "accessorKind": "get"
               }
             ]
@@ -982,50 +932,20 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "enumRawTypeName": "String",
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "RawRepresentable",
-            "printedName": "RawRepresentable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "RawValue",
-                "printedName": "RawValue",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:SY",
-            "mangledName": "$sSY"
-          },
           {
             "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
             "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -3445,76 +3365,6 @@
       "offset": 256,
       "length": 6,
       "value": "\"data\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 632,
-      "length": 59,
-      "value": "\"Unable to complete your request.  Please try again later.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 719,
-      "length": 35,
-      "value": "\"Invalid response from the server.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 778,
-      "length": 43,
-      "value": "\"Data received from the server is invalid.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 853,
-      "length": 49,
-      "value": "\"Unable to update message with read\/unread mark.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 939,
-      "length": 31,
-      "value": "\"Unable to post message event.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 632,
-      "length": 59,
-      "value": "\"Unable to complete your request.  Please try again later.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 719,
-      "length": 35,
-      "value": "\"Invalid response from the server.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 778,
-      "length": 43,
-      "value": "\"Data received from the server is invalid.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 853,
-      "length": 49,
-      "value": "\"Unable to update message with read\/unread mark.\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageCenterResults.swift",
-      "kind": "StringLiteral",
-      "offset": 939,
-      "length": 31,
-      "value": "\"Unable to post message event.\""
     },
     {
       "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",

@@ -40,15 +40,11 @@ public enum PostMessageEventResult {
   case success(String)
   case failure(MessageCenterError)
 }
-public enum MessageCenterError : String, Error {
-  case unableToComplete
+public enum MessageCenterError : Error, CustomStringConvertible {
+  case unableToComplete(error: Error?)
   case invalidResponse
-  case invalidData
-  case unableToMarkMessage
-  case unableToPostMessageEvent
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  case invalidData(error: Error?)
+  public var description: String {
     get
   }
 }
@@ -96,6 +92,3 @@ public struct MessageRead : Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-extension MessageCenterError : Swift.Equatable {}
-extension MessageCenterError : Swift.Hashable {}
-extension MessageCenterError : Swift.RawRepresentable {}
