@@ -297,7 +297,6 @@ SWIFT_CLASS("_TtC12PWEngagement12MessageEvent")
 @end
 
 
-
 @interface PWEngagement (SWIFT_EXTENSION(PWEngagement))
 + (void)postMessageEventWithCampaignIdentifier:(NSString * _Nonnull)campaignIdentifier completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
 @end

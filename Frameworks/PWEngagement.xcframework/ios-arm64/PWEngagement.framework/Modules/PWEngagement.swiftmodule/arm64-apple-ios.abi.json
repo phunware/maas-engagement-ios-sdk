@@ -1440,7 +1440,6 @@
             "mangledName": "$s12PWEngagement12MessageEventC4fromACs7Decoder_p_tKcfc",
             "moduleName": "PWEngagement",
             "implicit": true,
-            "isFromExtension": true,
             "throwing": true,
             "init_kind": "Designated"
           },
@@ -1469,7 +1468,6 @@
             "declAttributes": [
               "Final"
             ],
-            "isFromExtension": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
           }
@@ -1490,6 +1488,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -1538,20 +1550,6 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
           }
         ]
       },
@@ -3383,65 +3381,65 @@
     {
       "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
       "kind": "StringLiteral",
+      "offset": 1624,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1661,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1701,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1743,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1624,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1661,
+      "length": 10,
+      "value": "\"deviceId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1701,
+      "length": 7,
+      "value": "\"appId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1743,
+      "length": 12,
+      "value": "\"campaignId\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
+      "kind": "StringLiteral",
       "offset": 426,
       "length": 12,
       "value": "\"PWEngagement.MessageEvent\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1652,
-      "length": 4,
-      "value": "\"id\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1689,
-      "length": 10,
-      "value": "\"deviceId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1729,
-      "length": 7,
-      "value": "\"appId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1771,
-      "length": 12,
-      "value": "\"campaignId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1652,
-      "length": 4,
-      "value": "\"id\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1689,
-      "length": 10,
-      "value": "\"deviceId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1729,
-      "length": 7,
-      "value": "\"appId\""
-    },
-    {
-      "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/MessageEvent.swift",
-      "kind": "StringLiteral",
-      "offset": 1771,
-      "length": 12,
-      "value": "\"campaignId\""
     },
     {
       "filePath": "\/Users\/jenkins\/slave_data\/workspace\/engagement-sdk-ios\/PWEngagement\/MessageCenter\/Message.swift",

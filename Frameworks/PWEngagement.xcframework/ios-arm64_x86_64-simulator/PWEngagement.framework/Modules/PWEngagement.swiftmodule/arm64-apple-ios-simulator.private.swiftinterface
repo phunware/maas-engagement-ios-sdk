@@ -52,7 +52,7 @@ public struct MessageEventRecord : Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-@objc @_hasMissingDesignatedInitializers @objcMembers final public class MessageEvent : NSObject, NSCopying {
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class MessageEvent : NSObject, NSCopying, Codable {
   @objc final public let identifier: String
   @objc final public let deviceIdentifier: String
   @objc final public let appIdentifier: Int
@@ -61,8 +61,6 @@ public struct MessageEventRecord : Codable {
   @objc final public let sentTime: Int
   @objc final public func copy(with zone: NSZone? = nil) -> Any
   @objc deinit
-}
-extension MessageEvent : Codable {
   final public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }

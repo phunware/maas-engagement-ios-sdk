@@ -297,7 +297,6 @@ SWIFT_CLASS("_TtC12PWEngagement12MessageEvent")
 @end
 
 
-
 @interface PWEngagement (SWIFT_EXTENSION(PWEngagement))
 + (void)postMessageEventWithCampaignIdentifier:(NSString * _Nonnull)campaignIdentifier completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
 @end
@@ -623,7 +622,6 @@ SWIFT_CLASS("_TtC12PWEngagement12MessageEvent")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 @interface PWEngagement (SWIFT_EXTENSION(PWEngagement))
