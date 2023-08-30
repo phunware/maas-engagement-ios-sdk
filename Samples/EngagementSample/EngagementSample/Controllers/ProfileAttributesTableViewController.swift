@@ -92,18 +92,20 @@ class ProfileAttributesTableViewController: UITableViewController {
                         self?.attributeMetadata = attributeMetadata.sorted(by: { ($0[AttributeKey.name.rawValue] as! String).lowercased() < ($1[AttributeKey.name.rawValue] as! String).lowercased() })
                     }
                     PWMEAttributeManager.shared().fetchProfileAttributes(completion: { [weak self] (deviceAttributes, error) in
-                        if let error = error {
-                            self?.dismiss(animated: true, completion: nil)
-                            self?.displayErrorAlert(message: error.localizedDescription)
-                        } else {
-                            if let deviceAttributes = deviceAttributes as? [String: String] {
-                                self?.deviceAttributes = deviceAttributes
+                        DispatchQueue.main.async {
+                            if let error = error {
+                                self?.dismiss(animated: true, completion: nil)
+                                self?.displayErrorAlert(message: error.localizedDescription)
+                            } else {
+                                if let deviceAttributes = deviceAttributes as? [String: String] {
+                                    self?.deviceAttributes = deviceAttributes
+                                }
+                                self?.tableView.reloadData()
+                                self?.dismiss(animated: true, completion: nil)
+                                self?.hasPendingChanges = false
                             }
-                            self?.tableView.reloadData()
-                            self?.dismiss(animated: true, completion: nil)
-                            self?.hasPendingChanges = false
+                            self?.refreshControl?.endRefreshing()
                         }
-                        self?.refreshControl?.endRefreshing()
                     })
                 }
             }
