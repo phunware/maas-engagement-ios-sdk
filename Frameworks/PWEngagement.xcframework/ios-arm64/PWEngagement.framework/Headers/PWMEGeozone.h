@@ -25,22 +25,22 @@
 /**
  The geozone identifier. (read-only)
  */
-@property (readonly, nonatomic) NSString * identifier;
+@property (readonly, nonatomic) NSString *identifier;
 
 /**
  The name given to the geozone object. (read-only)
  */
-@property (readonly, nonatomic) NSString * name;
+@property (readonly, nonatomic) NSString *name;
 
 /**
  The code assigned to the geozone object. (read-only)
  */
-@property (readonly, nonatomic) NSString * code;
+@property (readonly, nonatomic) NSString *code;
 
 /**
  The description assigned to the geozone object. (read-only)
  */
-@property (readonly, nonatomic) NSString * zoneDescription;
+@property (readonly, nonatomic) NSString *zoneDescription;
 
 /**
  A flag that indicates if the user is currently inside the geozone. (read-only)
@@ -56,8 +56,6 @@
  A set of tags associated to the geozone. (read-only)
  */
 @property (readonly, nonatomic) NSSet *tags;
-
-
 
 /**
  * Unavailable initializer.

@@ -16,14 +16,19 @@ import _StringProcessing
   @objc deinit
 }
 extension PWEngagement {
+  @objc public static func fetchMessage(identifier: String, completion: @escaping (_ message: Message?, _ error: Error?) -> Void)
   public static func fetchMessages(startDate: Date, endDate: Date, completion: @escaping (_ messages: [Message]?, _ error: Error?) -> Void)
   public static func markMessageAsRead(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)
   public static func markMessageAsUnread(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)
 }
 extension PWEngagement {
-  @objc public static func postMessageEvent(messageIdentifier: String, completion: @escaping (_ error: Error?) -> Void)
+  @objc public static func postMessageEvent(campaignIdentifier: String, completion: @escaping (_ messageIdentifier: String?, _ error: Error?) -> Void)
 }
-public enum MessageResult {
+public enum MessageRecordResult {
+  case success(Message)
+  case failure(MessageCenterError)
+}
+public enum MessageListResult {
   case success([Message])
   case failure(MessageCenterError)
 }
@@ -31,48 +36,57 @@ public enum MessageReadResult {
   case success
   case failure(MessageCenterError)
 }
-public enum MessageEventResult {
-  case success
+public enum PostMessageEventResult {
+  case success(String)
   case failure(MessageCenterError)
 }
-public enum MessageCenterError : String, Error {
-  case unableToComplete
+public enum MessageCenterError : Error, CustomStringConvertible {
+  case unableToComplete(error: Error?)
   case invalidResponse
-  case invalidData
-  case unableToMarkMessage
-  case unableToPostMessageEvent
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
+  case invalidData(error: Error?)
+  public var description: String {
     get
   }
 }
-public struct MessageEvent : Codable {
+public struct MessageEventRecord : Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct MessageRead : Codable {
-  public func encode(to encoder: Swift.Encoder) throws
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class MessageEvent : NSObject, NSCopying, Codable {
+  @objc final public let identifier: String
+  @objc final public let deviceIdentifier: String
+  @objc final public let appIdentifier: Int
+  @objc final public let campaignIdentifier: Int
+  @objc final public let isRead: Bool
+  @objc final public let sentTime: Int
+  @objc final public func copy(with zone: NSZone? = nil) -> Any
+  @objc deinit
+  final public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 @objc @objcMembers public class Message : NSObject, Codable, NSCopying {
   @objc final public let identifier: String?
-  @objc final public let campaignID: String
+  @objc final public let campaignIdentifier: Int
   @objc final public let campaignType: String
   @objc final public let metaData: [String : String]?
   @objc final public let alertTitle: String?
   @objc final public let alertBody: String?
   @objc final public let promotionTitle: String?
   @objc final public let promotionBody: String?
+  @objc final public let promotionExpirationDate: Date?
   @objc final public let isRead: Bool
   @objc final public let timestamp: Date?
-  @objc public init(identifier: String?, campaignID: String, alertTitle: String?, alertBody: String?, promotionTitle: String?, promotionBody: String?, metaData: [String : String]?, campaignType: String, isRead: Bool, timestamp: Date?)
-  @objc public static func unpack(dict: [String : Any]) -> Message?
+  @objc public init(identifier: String?, campaignIdentifier: Int, alertTitle: String?, alertBody: String?, promotionTitle: String?, promotionBody: String?, promotionExpirationDate: Date?, metaData: [String : String]?, campaignType: String, isRead: Bool, timestamp: Date?)
   required public init(from decoder: Decoder) throws
+  @objc public static func unpack(dict: [String : Any]) -> Message?
   @objc public func copy(with zone: NSZone? = nil) -> Any
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
-extension MessageCenterError : Swift.Equatable {}
-extension MessageCenterError : Swift.Hashable {}
-extension MessageCenterError : Swift.RawRepresentable {}
+extension Message {
+  @objc public static func promotionExpirationDate(fromString dateString: String?) -> Date?
+}
+public struct MessageRead : Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}

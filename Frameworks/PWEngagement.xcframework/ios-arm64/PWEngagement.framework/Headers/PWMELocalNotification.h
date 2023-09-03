@@ -13,10 +13,13 @@
 extern NSString *const PWMELocalNotificationSendNotification;
 
 // UserInfo dictionary keys
-extern NSString *const PWMELocalNotificationUserInfoMessageIdentifierKey;
+extern NSString *const PWMELocalNotificationUserInfoCampaignIdentifierKey;
 extern NSString *const PWMELocalNotificationUserInfoCampaignTypeKey;
 extern NSString *const PWMELocalNotificationUserInfoAlertTitleKey;
 extern NSString *const PWMELocalNotificationUserInfoAlertBodyKey;
+extern NSString *const PWMELocalNotificationUserInfoPromotionTitleKey;
+extern NSString *const PWMELocalNotificationUserInfoPromotionBodyKey;
+extern NSString *const PWMELocalNotificationUserInfoPromotionExpirationDateKey;
 
 /**
  * A PWMELocalNotification object holds the information related to a local notification that will be shown to the user. The PWMELocalNotification object allows the alert title and alert body to be modified if needed.

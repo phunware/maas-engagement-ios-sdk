@@ -30,7 +30,7 @@ typedef void (^PWFetchAttributesBlock)(NSDictionary *attributes, NSError *error)
 /**
  * A block that will be called after the custom identifier is fetched from the server.
  *
- * - *identifer* User identifier.
+ * - *identifier* User identifier.
  * - *error* If the fetch completed successfully, this parameter is `nil`; otherwise, this parameter holds an error object that describes the error.
  */
 typedef void (^PWFetchCustomIdentifierBlock)(NSString *identifier, NSError *error);

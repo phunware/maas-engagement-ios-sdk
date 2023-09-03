@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.13.0][] - 2023-08-30
+
+### Added
+
+- Added ability to fetch a single message from Message Center
+- Added `promotionExpirationDate` property to messages
+
+### Changed
+
+- Updated to PWCore 3.12.2
+
 ## [3.12.0][] - 2023-03-30
 
 ### Removed
@@ -19,7 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.11.0][] - 2022-03-05
 
-### Features
+### Changed
 
 - Reworked the existing push notifications integration flow, so that it is easy and explicit for SDK adopters to configure within their own apps.  Please see migration guide for details.
 - Renamed analytics from `MESSAGE_RECEIVED` to `NOTIFICATION_RECEIVED` and `MESSAGE_VIEWED` to `NOTIFICATION_CLICKED`
@@ -29,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed issues with cancelling last monitored campaigns for a region
 - Fixed issues with updating monitored campaigns
 
-## [3.10.2][] - 2021-10-29
+## 3.10.2 - 2021-10-29
 
 ### Changed
 
@@ -254,3 +265,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Messaging SDK is now called PWEngagement.
+
+[3.13.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/3.12.0...3.13.0
+[3.12.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.11.1...3.12.0
+[3.11.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.11.0...v3.11.1
+[3.11.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.10.1...v3.11.0
+[3.10.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.10.0...v3.10.1
+[3.10.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.9.1...v3.10.0
+[3.9.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.9.0...v3.9.1
+[3.9.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.8.1...v3.9.0
+[3.8.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.8.0...v3.8.1
+[3.8.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.7.5...v3.8.0
+[3.7.5]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.7.4...v3.7.5
+[3.7.4]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.7.3...v3.7.4
+[3.7.3]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.7.2...v3.7.3
+[3.7.2]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.7.1...v3.7.2
+[3.7.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.7.0...v3.7.1
+[3.7.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.6.1...v3.7.0
+[3.6.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.6.0...v3.6.1
+[3.6.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.5.1...v3.6.0
+[3.5.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.5.0...v3.5.1
+[3.5.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.4.3...v3.5.0
+[3.4.5]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.4.4...v3.4.5
+[3.4.4]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.4.3...v3.4.4
+[3.4.3]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.4.2...v3.4.3
+[3.4.2]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.4.1...v3.4.2
+[3.4.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.4.0...v3.4.1
+[3.4.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.3.4...v3.4.0
+[3.3.4]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.3.3...v3.3.4
+[3.3.3]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.3.2...v3.3.3
+[3.3.2]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.3.1...v3.3.2
+[3.3.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.3.0...v3.3.1
+[3.3.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.2.0...v3.3.0
+[3.2.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.1.3...v3.2.0
+[3.1.3]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.1.2...v3.1.3
+[3.1.2]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.1.1...v3.1.2
+[3.1.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.1.0...v3.1.1
+[3.1.0]: https://github.com/phunware/maas-engagement-ios-sdk/tree/v1.0.0
