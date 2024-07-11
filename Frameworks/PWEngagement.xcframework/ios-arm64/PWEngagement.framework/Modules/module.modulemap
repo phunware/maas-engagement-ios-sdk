@@ -1,7 +1,7 @@
 framework module PWEngagement {
   umbrella header "PWEngagement.h"
-
   export *
+
   module * { export * }
 }
 

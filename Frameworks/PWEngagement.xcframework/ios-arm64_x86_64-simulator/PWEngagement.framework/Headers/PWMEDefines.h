@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Phunware, Inc. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
  
 typedef enum : NSUInteger {
     PWMEErrorInvalidCode,
@@ -52,6 +52,23 @@ extern NSString *const PWMEPendingDeregistrationConfigurationKey;
 
 extern NSString *const kPWMEDatabaseTagSeparator;
 
+#pragma mark - Logging
+
+extern NSString * const kPWMELogCategoryKey;
+extern NSString * const kPWMELogCategoryNetworking;
+extern NSString * const kPWMELogCategoryPersistence;
+extern NSString * const kPWMELogCategoryZones;
+extern NSString * const kPWMELogCategoryLocation;
+extern NSString * const kPWMELogCategoryGeneral;
+extern NSString * const kPWMELogCategoryRemoteNotifications;
+extern NSString * const kPWMELogCategoryMessage;
+extern NSString * const kPWMELogCategoryBeacon;
+extern NSString * const kPWMELogCategoryAttributes;
+extern NSString * const kPWMELogCategoryAnalyticsGeneral;
+extern NSString * const kPWMELogCategoryAnalyticsNetworking;
+extern NSString * const kPWMELogCategoryAnalyticsPersistence;
+extern NSString * const kPWMELogEventKey;
+extern NSString * const kPWMELogErrorKey;
 
 /**
  * Defines some common convenience methods related to applications constants.
@@ -67,6 +84,3 @@ extern NSString *const kPWMEDatabaseTagSeparator;
 + (NSString*)pathForEngagementDatabase;
 
 @end
-
-
-
