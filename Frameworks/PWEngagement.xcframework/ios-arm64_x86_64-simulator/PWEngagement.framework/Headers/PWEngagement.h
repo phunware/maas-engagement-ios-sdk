@@ -16,13 +16,12 @@
 #import <PWEngagement/PWVBLEManager.h>
 #import <PWEngagement/PWBeaconManager.h>
 #import <PWEngagement/PWMEDefines.h>
-#import <PWEngagement/PWMELogger.h>
 
 @class Message;
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *const PWEngagementVersion = @"3.13.0";
+static NSString *const PWEngagementVersion = @"3.14.0";
 
 /**
  The message identifier key which may be included in the notification's userInfo dictionary.

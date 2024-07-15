@@ -77,13 +77,15 @@ class LogsViewController: UIViewController {
     
     @IBAction func clearLogsTapped(_ sender: UIBarButtonItem) {
         do {
-            if let fileLogger = PWFileLogger.withServiceName(PWEngagement.serviceName()), let logsPath = fileLogger.logsDirectory() {
-                let files = FileManager.default.enumerator(atPath: logsPath)
-                while let file = files?.nextObject() {
-                    try FileManager.default.removeItem(at: URL(fileURLWithPath: "\(logsPath)/\(file)"))
-                }
-                refreshLogs()
+            let fileLogger = PWFileLogger.logger(withServiceName: PWEngagement.serviceName())
+            let logsPath = fileLogger.logsDirectory()
+            let files = FileManager.default.enumerator(atPath: logsPath)
+            
+            while let file = files?.nextObject() {
+                try FileManager.default.removeItem(at: URL(fileURLWithPath: "\(logsPath)/\(file)"))
             }
+            
+            refreshLogs()
         } catch (let error) {
             print(error.localizedDescription)
         }

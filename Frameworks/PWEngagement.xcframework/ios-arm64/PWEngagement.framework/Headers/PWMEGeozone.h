@@ -7,8 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-
-#import "PWMEZoneProtocol.h"
+#import <PWEngagement/PWMEZoneProtocol.h>
 
 /**
  * A PWMEGeozone object represents a circular region in a map with some associated data

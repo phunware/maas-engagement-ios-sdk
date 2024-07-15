@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.14.0][] - 2024-07-12
+
+### Added
+
+- Added privacy manifest
+
+### Changed
+
+- Improved nullability annotations
+- Bumped minimum iOS deployment target to 15.5
+- Updated to PWCore 3.13.0
+
 ## [3.13.0][] - 2023-08-30
 
 ### Added
@@ -260,12 +272,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Improved performance.
 
-## [3.1.0][[] - 2017-05-11
+## [3.1.0][] - 2017-05-11
 
 ### Changed
 
 - Messaging SDK is now called PWEngagement.
 
+[3.14.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/3.13.0...3.14.0
 [3.13.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/3.12.0...3.13.0
 [3.12.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.11.1...3.12.0
 [3.11.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/v3.11.0...v3.11.1

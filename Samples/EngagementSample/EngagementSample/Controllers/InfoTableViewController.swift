@@ -9,7 +9,7 @@
 import UserNotifications
 import UIKit
 import CoreLocation
-
+import PWCore
 import PWEngagement
 
 class InfoTableViewController: UITableViewController {

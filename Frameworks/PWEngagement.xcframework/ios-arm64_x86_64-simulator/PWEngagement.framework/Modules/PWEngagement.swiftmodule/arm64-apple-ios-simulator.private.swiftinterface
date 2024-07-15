@@ -1,13 +1,13 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PWEngagement
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios15.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PWEngagement
 import Foundation
 import PWCore
 @_exported import PWEngagement
 import Swift
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 @objc @_inheritsConvenienceInitializers @objcMembers final public class PushNotificationTracker : NSObject {
   @objc public static func didReceiveRemoteNotification(_ userInfo: [AnyHashable : Any])
   @objc public static func willPresent(_ notification: UNNotification)
@@ -41,6 +41,7 @@ public enum PostMessageEventResult {
   case failure(MessageCenterError)
 }
 public enum MessageCenterError : Error, CustomStringConvertible {
+  case badURL
   case unableToComplete(error: Error?)
   case invalidResponse
   case invalidData(error: Error?)
@@ -49,8 +50,8 @@ public enum MessageCenterError : Error, CustomStringConvertible {
   }
 }
 public struct MessageEventRecord : Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_hasMissingDesignatedInitializers @objcMembers final public class MessageEvent : NSObject, NSCopying, Codable {
   @objc final public let identifier: String
@@ -61,8 +62,8 @@ public struct MessageEventRecord : Codable {
   @objc final public let sentTime: Int
   @objc final public func copy(with zone: NSZone? = nil) -> Any
   @objc deinit
-  final public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  final public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class Message : NSObject, Codable, NSCopying {
   @objc final public let identifier: String?
@@ -81,12 +82,12 @@ public struct MessageEventRecord : Codable {
   @objc public static func unpack(dict: [String : Any]) -> Message?
   @objc public func copy(with zone: NSZone? = nil) -> Any
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 extension Message {
   @objc public static func promotionExpirationDate(fromString dateString: String?) -> Date?
 }
 public struct MessageRead : Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }

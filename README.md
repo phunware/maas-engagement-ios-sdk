@@ -6,14 +6,14 @@ This is Phunware's Mobile Engagement SDK for use with its Multiscreen-as-a-Servi
 
 Requirements
 ------------
-- PWCore 3.12.x
-- iOS 13.0 or greater
-- Xcode 12 or greater
+- PWCore 3.13.x
+- iOS 15.5 or greater
+- Xcode 15 or greater
 
 Installation
 ------------
 ### CocoaPods
-It is required to use [CocoaPods](http://www.cocoapods.org) 1.10 or greater to integrate the framework. Simply add the following to your Podfile:
+It is required to use [CocoaPods](http://www.cocoapods.org) 1.12 or greater to integrate the framework. Simply add the following to your Podfile:
 
 ````ruby
 pod 'PWEngagement'
@@ -75,4 +75,3 @@ You understand and consent to Phunware’s Privacy Policy located at www.phunwar
 Terms
 -----------
 Use of this software requires review and acceptance of our terms and conditions for developer use located at http://www.phunware.com/terms
-

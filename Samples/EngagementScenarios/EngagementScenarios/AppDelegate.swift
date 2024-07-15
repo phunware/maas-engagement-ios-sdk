@@ -20,12 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        PWEngagement.start(withMaasAppId: applicationId, accessKey: accessKey, completion: { <#Error?#> in
-            <#code#>
+        PWEngagement.start(withMaasAppId: applicationId, accessKey: accessKey) { error in
+            if let error {
+                print("Engagement SDK failed to start with error: \(error.localizedDescription).")
+            } else {
+                print("Engagement SDK started.")
+            }
         }
+        
         PWEngagement.didFinishLaunching(options: launchOptions) { notification -> Bool in
             return true
         }
+        
         return true
     }
 

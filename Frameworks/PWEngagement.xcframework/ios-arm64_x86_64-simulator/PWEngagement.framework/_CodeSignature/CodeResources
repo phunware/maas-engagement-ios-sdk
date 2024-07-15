@@ -10,11 +10,11 @@
 		</data>
 		<key>Headers/PWEngagement-Swift.h</key>
 		<data>
-		eSuatjm/hWbfB3ZWSfrW5uQaSAc=
+		qsud+6y78WMixOGCERS9Bkc8jkQ=
 		</data>
 		<key>Headers/PWEngagement.h</key>
 		<data>
-		YtOjhqx3Gc8k40q8DIm/9k9cPl8=
+		EojpO6lz6TCVh4X3zfdFUnasnOk=
 		</data>
 		<key>Headers/PWMEAttributeManager.h</key>
 		<data>
@@ -22,19 +22,15 @@
 		</data>
 		<key>Headers/PWMEDefines.h</key>
 		<data>
-		flHnlgC56OreJc49TxlHDz0vrL8=
+		bKaPGxgcy5yadrQYTmz2lsVcW+g=
 		</data>
 		<key>Headers/PWMEGeozone.h</key>
 		<data>
-		4ebtud2o+fdmvFzXXgtZPllM1m8=
+		SUyPEnmXug8Mahwq0LPlnJrqOBA=
 		</data>
 		<key>Headers/PWMELocalNotification.h</key>
 		<data>
 		Pkm0Gy9QMVfIgLkmWiaaoIgfYg0=
-		</data>
-		<key>Headers/PWMELogger.h</key>
-		<data>
-		d2lvayrP90l6xxiEkNe4AFpCZDE=
 		</data>
 		<key>Headers/PWMEZoneMessage.h</key>
 		<data>
@@ -50,51 +46,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		paibJjvmtkCStrOUXxkGfkqVUcw=
+		bCA8N+BtcbL6x0kdneH0vPiCutw=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		FvjN6AHZppdkX9dgvySv+s1vhjc=
+		j2QNlFcWDBWOCV3zno19bfvPw9c=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		8fzTRpcA1ix+B0I02EBOu72q5zU=
+		E1hPiHE3mimDFnZXqj4gba7gxHI=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		uUVN64ZyZa5toBetv1RAW6VDHNI=
+		h0nLIRCGCXqG9jJV0YhsjDIREcc=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		8fzTRpcA1ix+B0I02EBOu72q5zU=
+		E1hPiHE3mimDFnZXqj4gba7gxHI=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		n/T0D1kBRe4NsYC3q9I6sfXyTrY=
+		hTPXyOT5gUuVHUl756wbZVoRNvw=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		FvjN6AHZppdkX9dgvySv+s1vhjc=
+		j2QNlFcWDBWOCV3zno19bfvPw9c=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		huPA9EmAV3Iwri5/FB7heVaNFEI=
+		iHFPDn3xDn8w3fdQopBIYCv1Bk8=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		VYNB0hXP/8asp5nZjDdc6y/LQc4=
+		hF6C4tgfxckTQ5wKVFPmKToduls=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		huPA9EmAV3Iwri5/FB7heVaNFEI=
+		iHFPDn3xDn8w3fdQopBIYCv1Bk8=
 		</data>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		w636FFzaegdl9/8qGpg6UMpRzx8=
+		NAxjO5uObdlJMeE9gEz5PBiBNyc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		uSJJXtP8OJ35+9JhMhkBM3BTpEk=
+		tXVR8P2QumSRvOHsrYnhuWeStgA=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		UXeYKPAWbtCsCYbv56DuAE3EgHI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -110,14 +110,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IN6nLaVcPXpukFUrrrV2+7f8tfR52U+vG+FoWIuiJ4A=
+			LCyuzVuD7AwC4ttoz6xnae01xxb5PcBp8DBZjF5s8YQ=
 			</data>
 		</dict>
 		<key>Headers/PWEngagement.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oyzONFxoINGB9jIYuNDW3GHXqqDKpFOGpCePUQFjLk4=
+			KisuN1nupFWzqTIuRLU9321QK2arjvhTdxVhSieFok0=
 			</data>
 		</dict>
 		<key>Headers/PWMEAttributeManager.h</key>
@@ -131,14 +131,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tQVIUotIR62GyQuk5p1/ysKYF2oo6NUe7riQgJBxo34=
+			eSBEWktv2mTMFYfMRDXh/NSL7/9zPfKpoOXLkq2XzcA=
 			</data>
 		</dict>
 		<key>Headers/PWMEGeozone.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WkR8EPBHfiSomSAGkcSACzmcF7MPglboXoH6OR5qB+0=
+			e/xfnZwt7JT0IZDMFSIJg7YrIL/S6wjglqZiPxo2kFE=
 			</data>
 		</dict>
 		<key>Headers/PWMELocalNotification.h</key>
@@ -146,13 +146,6 @@
 			<key>hash2</key>
 			<data>
 			lyyQkzMXObB6npUBvTBZwPW8LPPxAh28RFUWHSDbpec=
-			</data>
-		</dict>
-		<key>Headers/PWMELogger.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rR0EGphTP61Ta7nwIktW28gHAAEq8WY5ABNuqdxdIxo=
 			</data>
 		</dict>
 		<key>Headers/PWMEZoneMessage.h</key>
@@ -180,77 +173,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bQWO8E3/c/uDP9FhwpefYTrkB6UH2cvXBowuJciHFD8=
+			UuuzN2jjGOJ1Wb9Ikv+0tBblYzl6Mqk3vanRimRd9sY=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QlXszdB+SwpNMaan/j1sAn/bwNlTxtcOBZWqqv+IFYk=
+			KslBxtf5kexEGE+QzKzk4Ij6faX/MDcDL6gJfrChNTI=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BDzACOtgqX/CW/7QLMHBgwe8MRMpXN14RD3V+TmavzQ=
+			L0Ei/qzYDwxcfntMju7YywV18SfYNZEwTDr7lZvqv2Q=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QlXszdB+SwpNMaan/j1sAn/bwNlTxtcOBZWqqv+IFYk=
+			KslBxtf5kexEGE+QzKzk4Ij6faX/MDcDL6gJfrChNTI=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JWGJIRUFkRtvaQr3uwJUaM6y+POBxJ6gIGogV/uot/0=
+			YlWAB1LLHYpzuEa2Lt6LDhg8+ZtQwu3NKjosM+m0CoE=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bQWO8E3/c/uDP9FhwpefYTrkB6UH2cvXBowuJciHFD8=
+			UuuzN2jjGOJ1Wb9Ikv+0tBblYzl6Mqk3vanRimRd9sY=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RjCiuIBX2Js2QwDpMXz5ehwbgf8zauSyt2VosY6OJbI=
+			L3bigxGWkhyS3Wt2/DxbU/0KJTUcURWmZdOf8oVGCN8=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fu+75J4n2AEow1eEB5LQc5Eqoo1NloW1HSdCFzKdmlA=
+			mwa5Pl4YCsrwMGV2qrkKaTFG9v1f3WKBACwQ3Xh7bM8=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RjCiuIBX2Js2QwDpMXz5ehwbgf8zauSyt2VosY6OJbI=
+			L3bigxGWkhyS3Wt2/DxbU/0KJTUcURWmZdOf8oVGCN8=
 			</data>
 		</dict>
 		<key>Modules/PWEngagement.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8iGxLsS+pdImugYGF3BAMu+7awg9YoESSbC5L8jK6ic=
+			FZSQaJyYwSXqb5i2D2CwrdoswloQM05iCoEB0V8c3ps=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MJxe/oSf9wrSy4QmhqJk2Xfl/BZUWH/RAfrp/pWa/kc=
+			ppvN4Ge1qUWyNl1xmYp9ZO9tNtEDv6q5yIVSZYFRyVw=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IZI4d3g7MZlFgGVwDBkzLUTyQc2eTn0MQJH7hAlQ5xw=
 			</data>
 		</dict>
 	</dict>
