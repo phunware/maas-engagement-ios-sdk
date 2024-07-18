@@ -24,12 +24,12 @@ static NSString *const PWMEZoneMessageGeofenceExitCampaignType = @"GEOFENCE_EXIT
 /**
  * Campaign type string value for broadcast campaigns.
  */
-static NSString *const PWMEZoneMessageBroadCastCampaignType = @"BROADCAST";
+static NSString *const PWMEZoneMessageBroadcastCampaignType = @"BROADCAST";
 
 /**
  * Campaign type string value for on-demond broadcast campaigns.
  */
-static NSString *const PWMEZoneMessageOnDemandBroadCastCampaignType = @"ON_DEMAND_BROADCAST";
+static NSString *const PWMEZoneMessageOnDemandBroadcastCampaignType = @"ON_DEMAND_BROADCAST";
 
 
 /**
