@@ -38,6 +38,48 @@
         "children": [
           {
             "kind": "Function",
+            "name": "didFinishLaunching",
+            "printedName": "didFinishLaunching(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[UIKit.UIApplication.LaunchOptionsKey : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LaunchOptionsKey",
+                    "printedName": "UIKit.UIApplication.LaunchOptionsKey",
+                    "usr": "c:@T@UIApplicationLaunchOptionsKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker(cm)didFinishLaunching:",
+            "mangledName": "$s12PWEngagement23PushNotificationTrackerC18didFinishLaunchingyySDySo29UIApplicationLaunchOptionsKeyaypGFZ",
+            "moduleName": "PWEngagement",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "didReceiveRemoteNotification",
             "printedName": "didReceiveRemoteNotification(_:)",
             "children": [
@@ -135,32 +177,6 @@
               "ObjC"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PushNotificationTracker",
-                "printedName": "PWEngagement.PushNotificationTracker",
-                "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@PWEngagement@objc(cs)PushNotificationTracker(im)init",
-            "mangledName": "$s12PWEngagement23PushNotificationTrackerCACycfc",
-            "moduleName": "PWEngagement",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
@@ -174,6 +190,7 @@
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"

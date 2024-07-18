@@ -279,6 +279,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import Foundation;
 @import ObjectiveC;
+@import UIKit;
 #endif
 
 #import <PWEngagement/PWEngagement.h>
@@ -358,10 +359,12 @@ SWIFT_CLASS("_TtC12PWEngagement12MessageEvent")
 
 SWIFT_CLASS("_TtC12PWEngagement23PushNotificationTracker")
 @interface PushNotificationTracker : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
++ (void)didFinishLaunching:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nonnull)launchOptions;
 + (void)didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
 + (void)willPresent:(UNNotification * _Nonnull)notification;
 + (void)didReceive:(UNNotificationResponse * _Nonnull)response;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #endif
