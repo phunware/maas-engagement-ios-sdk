@@ -5,5 +5,5 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'EngagementScenarios' do
-  pod 'PWEngagement', '3.14.0'
+  pod 'PWEngagement', '3.14.1'
 end
