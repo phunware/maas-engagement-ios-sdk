@@ -21,7 +21,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *const PWEngagementVersion = @"3.14.1";
+static NSString *const PWEngagementVersion = @"3.14.2";
 
 /**
  The message identifier key which may be included in the notification's userInfo dictionary.
