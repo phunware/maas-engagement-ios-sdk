@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.14.3][] - 2025-08-29
+
+### Changed
+
+- Improved beacon campaign scalability by including beacon's major value when monitoring a beacon region.  
+
 ## [3.14.2][] - 2024-07-29
 
 ### Fixed
@@ -290,6 +296,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Messaging SDK is now called PWEngagement.
 
+[3.14.2]: https://github.com/phunware/maas-engagement-ios-sdk/compare/3.14.2...3.14.3
 [3.14.2]: https://github.com/phunware/maas-engagement-ios-sdk/compare/3.14.1...3.14.2
 [3.14.1]: https://github.com/phunware/maas-engagement-ios-sdk/compare/3.14.0...3.14.1
 [3.14.0]: https://github.com/phunware/maas-engagement-ios-sdk/compare/3.13.0...3.14.0
